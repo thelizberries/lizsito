@@ -4,6 +4,11 @@ body {
 	background: #182430;
 }
 
+button {
+	background: transparent;
+    border: none;
+}
+
 .font-weight-100 {
 	font-weight: 100;
 }
@@ -183,4 +188,8 @@ a.text-red:hover {
 }
 .img-fluid {
     height: 100%!important;
+}
+
+.modal-content {
+	background-color: #071116;
 }
