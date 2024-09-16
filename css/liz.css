@@ -36,17 +36,17 @@ button {
 
 #showcase-background-thelizberries {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-		url("../lizberries/lizberriesPhotos/14-_IMG6727-Edit-SharpenAI-Motion-Edit.jpg");
+		url("../lizberries/lizberriesPhotos/theLizberriesHome.jpg");
 	height: 800px;
 }
 #showcase-background-thelizards {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-		url("../thelizards/lizardsPhotos/5-_IMG6680-Enhanced-NR-Edit-SharpenAI-Motion.jpg");
+		url("../thelizards/lizardsPhotos/theLizardsHome.jpg");
 		height: 800px;
 }
 #showcase-background-5cerealiz {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-		url("../5cerealiz/5cerealizPhotos/1-_IMG6656-2-Edit-SharpenAI-Motion.jpg");
+		url("../5cerealiz/5cerealizPhotos/5CerealizHome.jpg");
 		height: 800px;
 }
 #showcase-background-promo-lizberries {
@@ -189,9 +189,6 @@ a.text-red:hover {
 	transition:all .5s ease;
 }
 
-.portfolio-item{
-	/*width:100%;*/
-}
 .portfolio-item .item{
 	/*width:303px;*/
 	float:left;
@@ -207,4 +204,84 @@ a.text-red:hover {
 
 .a-footer {
 	margin-right: 10px;
+}
+
+/* Rendi l'intero contenitore orizzontalmente scrollabile */
+.portfolio-item-container {
+    overflow-x: auto; /* Scrolling orizzontale */
+    white-space: nowrap;
+    padding-bottom: 15px;
+    scrollbar-width: thin; /* Per browser compatibili, come Firefox */
+}
+
+.portfolio-item {
+    display: flex;
+    gap: 10px; /* Spazio tra le immagini */
+}
+
+.item {
+    flex-shrink: 0; /* Prevenire il ridimensionamento delle immagini */
+    margin-right: 10px;
+}
+
+.max-height-155 {
+    max-height: 155px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Personalizzazione delle scrollbar, compatibile solo con Webkit (Chrome, Safari) */
+.portfolio-item-container::-webkit-scrollbar {
+    height: 8px; /* Altezza della scrollbar */
+}
+
+.portfolio-item-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.portfolio-item-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Image orizontal carousel */
+.portfolio-item-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Aggiungi il comportamento smooth */
+}
+
+.portfolio-item {
+    display: flex;
+    flex-wrap: nowrap; /* Impedisce il ritorno a capo delle immagini */
+    gap: 15px; /* Aggiungi spazio tra le immagini se necessario */
+}
+
+.item {
+    min-width: 150px; /* Imposta una larghezza minima per gli elementi */
+}
+
+.img-fluid {
+    max-height: 155px;
+    object-fit: cover;
+}
+
+.scroll-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    height: 40px;
+}
+
+.left-scroll {
+    left: 0;
+}
+
+.right-scroll {
+    right: 0;
 }
