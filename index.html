@@ -42,25 +42,19 @@
 </head>
 
 <body>
-    <!-- partial:index.partial.html -->
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark-secondary">
             <div class="container">
                 <div class="social-media">
-                    <a href="https://www.facebook.com/TheLizardsMilano" rel="noopener" target="_blank"><i
-                            class="bi-facebook"></i></a>
-                    <a href="https://www.youtube.com/thelizardsrock" rel="noopener" target="_blank"><i
-                            class="bi-youtube"></i></a>
-                    <a href="https://www.instagram.com/thelizardsmilano" rel="noopener" target="_blank"><i
-                            class="bi-instagram"></i></a>
-                    <a href="https://open.spotify.com/artist/5YnIGjxUv0DNzA9doia11J" rel="noopener" target="_blank"><i
-                            class="bi-spotify"></i></a>
+                    <a href="https://www.facebook.com/TheLizardsMilano" rel="noopener" target="_blank">
+                        <i class="bi-facebook"></i></a>
+                    <a href="https://www.youtube.com/thelizardsrock" rel="noopener" target="_blank">
+                        <i class="bi-youtube"></i></a>
+                    <a href="https://www.instagram.com/thelizardsmilano" rel="noopener" target="_blank">
+                        <i class="bi-instagram"></i></a>
+                    <a href="https://open.spotify.com/artist/5YnIGjxUv0DNzA9doia11J" rel="noopener" target="_blank">
+                        <i class="bi-spotify"></i></a>
                 </div>
-                <!-- <a class="navbar-brand" href="#">The Lizards</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
@@ -77,7 +71,17 @@
                                 href="5cerealiz/index.html">5 Cerealiz</a>
                         </li>
                     </ul>
+                    <!-- Submenu nascosto che si aprirà al click -->
+                    <ul id="submenu" class="submenu">
+                        <li><a class="dropdown-item" href="#showcase-bio-thelizards">Bio</a></li>
+                        <li><a class="dropdown-item" href="#showcase-band-thelizards">The Band</a></li>
+                        <li><a class="dropdown-item" href="#contactForm">Contact</a></li>
+                    </ul>
                 </div>
+            
+                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
         </nav>
     </header>
@@ -87,23 +91,16 @@
             <div class="container text-white container-title">
                 <h1 class="display-2 mb-3">The Lizards</h1>
                 <div class="row">
-                    <!-- <div class="col-12 col-lg-8">
-                        <p>Get ready for the most anticipated Jazz Concert of the year. See your favorite local artists
-                            come together like never before.
-                        </p>
-                    </div> -->
                     <iframe style="border-radius:12px" 
                         src="https://open.spotify.com/embed/artist/5YnIGjxUv0DNzA9doia11J?utm_source=generator&theme=0" 
                         width="45%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; 
                         clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                     </iframe>
                 </div>
-                <!--<a class="pr-5 pl-5 pt-2 pb-2 text-white btn text-uppercase font-weight-bold btn-gradient"
-                    href="#">Listen us on spotify</a> -->
             </div>
         </section>
 
-        <section class="pb-5 pt-5 bg-dark-secondary">
+        <section class="pb-5 pt-5 bg-dark-secondary" id="showcase-bio-thelizards">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 text-white">
@@ -149,7 +146,7 @@
             </div>
         </section>
 
-        <section class="background pb-5 pt-5 text-white text-center" id="showcase-background-2">
+        <section class="background pb-5 pt-5 text-white text-center" id="showcase-band-thelizards">
             <div class="container">
                 <h2 class="text-uppercase display-4">The Band</h2>
                 <hr class="hr-red">
@@ -312,8 +309,5 @@
             </ul>
         </div>
     </footer>
-    <!-- partial -->
-
 </body>
-
 </html>

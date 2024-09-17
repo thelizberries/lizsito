@@ -57,7 +57,7 @@ button {
 	background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
 	background-attachment: fixed; /* Mantiene l'immagine fissa durante lo scroll */
 }
-#showcase-background-promo-5cerealiz {
+#showcase-promo-5cerealiz {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
 		url("../5cerealiz/5cerealizPhotos/background-video-promo.jpg");
 }
@@ -284,4 +284,113 @@ a.text-red:hover {
 
 .right-scroll {
     right: 0;
+}
+
+/* Pulsante hamburger sempre visibile */
+.navbar-toggler {
+    display: block; /* Assicurati che sia visibile su tutti gli schermi */
+    border: none;
+    outline: none;
+	margin-left: auto; /* Sposta il pulsante a destra */
+    margin-right: 0;   /* Elimina eventuali margini a destra */
+}
+
+/* Allinea il pulsante sulla stessa riga delle informazioni del <nav> */
+.navbar-toggler {
+    margin-left: 10px; /* Regola la distanza a sinistra se necessario */
+	border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    /* Mostra il pulsante anche su schermi grandi */
+    .navbar-toggler {
+        display: block !important;
+    }
+}
+
+/* Stile per il sottomenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Posizionamento dinamico tramite JavaScript */
+    left: 0;   /* Viene aggiornato dinamicamente */
+    padding: 1px;
+    list-style-type: none;
+    z-index: 10;
+    text-align: center;
+    width: auto; /* Adatta automaticamente la larghezza */
+}
+
+.submenu.show {
+    display: block; /* Mostra il menu quando attivo */
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.submenu.hide {
+	display: block; /* Mostra il menu quando attivo */
+    animation: slideUp 0.3s ease-in-out forwards;
+}
+
+/* Effetto di srotolamento */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effetto di srotolamento verso l'alto (chiusura) */
+@keyframes slideUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Stile delle voci del sottomenu */
+.submenu li {
+    padding: 8px 0;
+}
+
+.submenu a {
+    color: #fff; /* Colore del testo */
+    font-size: 14px; /* Simile ai titoli principali */
+    text-transform: uppercase; /* Stessa trasformazione dei titoli principali */
+    font-weight: 100; /* Peso del carattere */
+    letter-spacing: 4px; /* Spaziatura simile ai titoli principali */
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    color: #000000; /* Colore di hover */     
+}
+
+/* Stile per l'allineamento del pulsante hamburger */
+.navbar-toggler {
+    margin-left: auto; /* Allinea a destra */
+}
+
+/* Rende il pulsante sempre visibile su dispositivi più grandi */
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: inline-block;
+    }
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, .5) !important;
+}
+
+.navbar-toggler:focus, .navbar-toggler:hover {
+    color: rgba(255, 255, 255, .75);
 }

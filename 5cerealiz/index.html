@@ -50,15 +50,13 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark-secondary">
             <div class="container">
                 <div class="social-media">
-                    <a href="https://www.facebook.com/5CereaLiz" rel="noopener" target="_blank"><i class="bi-facebook"></i></a>
-                    <a href="https://www.youtube.com/@5Cerealiz" rel="noopener" target="_blank"><i class="bi-youtube"></i></a>
-                    <a href="https://www.instagram.com/5cerealiz" rel="noopener" target="_blank"><i class="bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/5CereaLiz" rel="noopener" target="_blank">
+                        <i class="bi-facebook"></i></a>
+                    <a href="https://www.youtube.com/@5Cerealiz" rel="noopener" target="_blank">
+                        <i class="bi-youtube"></i></a>
+                    <a href="https://www.instagram.com/5cerealiz" rel="noopener" target="_blank">
+                        <i class="bi-instagram"></i></a>
                 </div>
-                <!--<a class="navbar-brand" href="#">5 Cerealiz</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -73,6 +71,17 @@
                             </a>
                         </li>
                     </ul>
+                    <!-- Submenu nascosto che si aprirà al click -->
+                    <ul id="submenu" class="submenu">
+                        <li><a class="dropdown-item" href="#showcase-bio-5cerealiz">Bio</a></li>
+                        <li><a class="dropdown-item" href="#showcase-promo-5cerealiz">Video Promo</a></li>
+                        <li><a class="dropdown-item" href="#contactForm">Contact</a></li>
+                    </ul>
+                </div>
+            
+                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 </div>
             </div>
         </nav>
@@ -82,7 +91,6 @@
         <section class="background grid grid-center" id="showcase-background-5cerealiz">
             <div class="container text-white container-title">
                 <h1 class="display-2 mb-3">5 Cerealiz</h1>
-                <!-- <img class="display-2 mb-3" src="../5cerealiz/5cerealizPhotos/logo_titolo.png"/> -->
                 <div class="row">
                     <div class="col-12 col-lg-8">
                         <p>Con i 5 Cerealiz / e la tua energia in più / con quel gusto di retrò ('70, '80, '90, 2000) 
@@ -90,17 +98,15 @@
                         </p>
                     </div>
                 </div>
-                <!-- <a class="pr-5 pl-5 pt-2 pb-2 text-white btn text-uppercase font-weight-bold btn-gradient"
-                    href="#">Order Now</a> -->
-                    <div>
-                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2F5CereaLiz%2F&width=400&layout&action&size&share=false&height=50&appId" 
-                        width="400" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; 
-                        encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
+                <div>
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2F5CereaLiz%2F&width=400&layout&action&size&share=false&height=50&appId" 
+                    width="400" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; 
+                    encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
             </div>
         </section>
 
-        <section class="pb-5 pt-5 bg-dark-secondary">
+        <section class="pb-5 pt-5 bg-dark-secondary" id="showcase-bio-5cerealiz">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 text-white">
@@ -124,7 +130,7 @@
                                     <span class="font-weight-100">Inserire testo per bio...
                                     </span>
                                 </p>
-                                <a class="text-red text-uppercase font-weight-bold" href="#">Maggiori Info</a>
+                                <a class="text-red text-uppercase font-weight-bold" href="#" id="loadMoreInfo">Maggiori Info</a>
                             </div>
                         </aside>
                     </div>
@@ -132,7 +138,7 @@
             </div>
         </section>
 
-        <section class="background main-pic pb-5 pt-5 text-white text-center" id="showcase-background-promo-5cerealiz">
+        <section class="background main-pic pb-5 pt-5 text-white text-center" id="showcase-promo-5cerealiz">
             <div class="container">
                 <h2 class="text-uppercase display-4">Video Promo</h2>
                 <hr class="hr-red">
@@ -265,8 +271,5 @@
             </ul>
         </div>
     </footer>
-    <!-- partial -->
-
 </body>
-
 </html>

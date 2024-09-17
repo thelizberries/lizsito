@@ -106,25 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //Script for image carousel
 const images = [
-    "../lizberries/lizberriesPhotos/photo_carousel/13-shooting-24.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/14-shooting-24.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/15-shooting-24.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/1-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/2-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/3-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/4-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/5-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/6-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/7-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/8-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/9-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/10-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/11-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/12-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/13-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/14-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/15-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/16-live.jpg"
 ];
 
 // Funzione per caricare dinamicamente le immagini

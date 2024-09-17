@@ -44,7 +44,6 @@
 </head>
 
 <body>
-    <!-- partial:index.partial.html -->
      <!-- Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" 
@@ -61,11 +60,6 @@
                     <a href="https://instagram.com/thelizberries" rel="noopener" target="_blank"><i
                             class="bi-instagram"></i></a>
                 </div>
-                <!-- <a class="navbar-brand" href="#">The Lizberries</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -83,7 +77,18 @@
                                 href="../5cerealiz/index.html">5 Cerealiz</a>
                         </li>
                     </ul>
+                    <!-- Submenu nascosto che si aprirà al click -->
+                    <ul id="submenu" class="submenu">
+                        <li><a class="dropdown-item" href="#showcase-bio-thelizberries">Bio</a></li>
+                        <li><a class="dropdown-item" href="#showcase-background-promo-lizberries">Promo Video</a></li>
+                        <li><a class="dropdown-item" href="#showcase-background-2">Latest Photos</a></li>
+                        <li><a class="dropdown-item" href="#contactForm">Contact</a></li>
+                    </ul>
                 </div>
+            
+                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
         </nav>
     </header>
@@ -117,7 +122,7 @@
             </div>
         </section>
 
-        <section class="pb-5 pt-5 bg-dark-secondary">
+        <section class="pb-5 pt-5 bg-dark-secondary" id="showcase-bio-thelizberries">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 text-white">
@@ -209,12 +214,15 @@
             <hr class="hr-red">
             <br>
             <!--<h3 class="mt-5 fab fa-twitter"></h3>-->
-            <p class="font-weight-100 letter-spacing-4px"><i class="fas fa-quote-left"></i> I am looking foward to
-                attending the Jonathan Smith's Concert!!! <i class="fas fa-quote-right"></i></p>
-            <a class="text-red" href="#">@aconcertfan</a>
+            <p class="font-weight-100 letter-spacing-4px">
+                <i class="fas fa-quote-left"></i>
+                Watch out! The new version of Lizberries website is now online!
+                <i class="fas fa-quote-right"></i>
+            </p>
+            <a class="text-red" href="#">@TheLizberries</a>
         </section>
 
-        <section class="pb-5 pt-5 bg-dark-secondary text-white text-center">
+        <section class="pb-5 pt-5 bg-dark-secondary text-white text-center" id="contactForm">
             <h2 class="text-uppercase display-4">Contact Us</h2>
             <hr class="hr-red">
             <form class="text-left container mt-5" id="contactForm" action="#" method="POST" onsubmit="sendEmail(); return false;">
