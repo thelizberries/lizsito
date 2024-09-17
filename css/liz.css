@@ -37,17 +37,14 @@ button {
 #showcase-background-thelizberries {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
 		url("../lizberries/lizberriesPhotos/theLizberriesHome.jpg");
-	height: 800px;
 }
 #showcase-background-thelizards {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
 		url("../thelizards/lizardsPhotos/theLizardsHome.jpg");
-		height: 800px;
 }
 #showcase-background-5cerealiz {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
 		url("../5cerealiz/5cerealizPhotos/5CerealizHome.jpg");
-		height: 800px;
 }
 #showcase-background-promo-lizberries {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
@@ -67,6 +64,34 @@ button {
 	background-position: center; /* Centra l'immagine */
 	background-size: cover; /* Fa in modo che l'immagine copra l'intera sezione */
 }
+#showcase-background-thelizards img,
+#showcase-background-thelizberries img,
+#showcase-background-5cerealiz img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+/* Specifica l'altezza minima e altre regole per l'elemento principale su schermi piccoli */
+@media (max-width: 768px) {
+	#showcase-background-thelizards,
+    #showcase-background-thelizberries,
+	#showcase-background-5cerealiz {
+        background-size: cover; /* Assicurati che lo sfondo si adatti */
+        padding: 0;
+    }
+
+    #showcase-background-thelizards img,
+	#showcase-background-thelizberries img,
+	#showcase-background-5cerealiz img {
+        width: 100%; /* Immagine che si adatta alla larghezza del contenitore */
+        height: auto; /* Mantieni il rapporto d'aspetto */
+    }
+
+    /* Aggiungi eventualmente un padding o margine se necessario */
+}
+
 .btn-gradient {
 	background: linear-gradient(217deg, #f8174b, #7f1fa3 70.71%);
 	border: 1px solid rgba(72, 48, 48, 0.5);
@@ -158,8 +183,66 @@ a.text-red:hover {
 	bottom: 1rem;
 }
 
+/* Altezza fissa per schermi più grandi */
 .h-500px {
-	height: 500px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Il contenuto si allinea verso il basso */
+    overflow: hidden; /* Nasconde eventuali parti in eccesso dell'immagine */
+    position: relative;
+    text-align: center;
+}
+
+/* Le immagini si adattano al contenitore senza deformarsi */
+.h-500px img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assicura che l'immagine copra l'intero spazio */
+}
+
+/* Testo sovrapposto sulle immagini */
+.h-500px h4 {
+    position: absolute;
+    bottom: 10px; /* Leggermente sopra il bordo inferiore */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Sfondo scuro semitrasparente */
+    padding: 5px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Adatta l'altezza delle card per schermi più piccoli */
+@media (max-width: 992px) {
+    .h-500px {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .h-500px {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .h-500px {
+        height: 250px;
+    }
+
+    /* Le immagini si adattano alla larghezza del contenitore */
+    .h-500px img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Il testo rimane visibile anche su schermi più piccoli */
+    .h-500px h4 {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
 }
 
 .social-media {
