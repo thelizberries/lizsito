@@ -61,6 +61,12 @@ button {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
 		url("../5cerealiz/5cerealizPhotos/background-video-promo.jpg");
 }
+#showcase-background-live-lizberries {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+		url("../lizberries/lizberriesPhotos/background-lizberries-live.png");
+	background-position: center; /* Centra l'immagine */
+	background-size: cover; /* Fa in modo che l'immagine copra l'intera sezione */
+}
 .btn-gradient {
 	background: linear-gradient(217deg, #f8174b, #7f1fa3 70.71%);
 	border: 1px solid rgba(72, 48, 48, 0.5);
@@ -393,4 +399,9 @@ a.text-red:hover {
 
 .navbar-toggler:focus, .navbar-toggler:hover {
     color: rgba(255, 255, 255, .75);
+}
+
+.gig-live {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
 }
