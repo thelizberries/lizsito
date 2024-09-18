@@ -488,3 +488,22 @@ a.text-red:hover {
     margin-top: 1rem;
     margin-bottom: 0rem;
 }
+
+/* Collaborations section */
+#showcase-collaborations-lizberries .card:hover {
+    transform: scale(1.05);
+}
+
+/*Booking - Management section*/
+#showcase-booking-lizberries .card {
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#showcase-booking-lizberries .card:hover {
+    transform: scale(1.05);
+}
+
+#showcase-booking-lizberries .btn {
+    margin-top: 15px;
+}
