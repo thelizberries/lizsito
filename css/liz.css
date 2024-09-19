@@ -507,3 +507,7 @@ a.text-red:hover {
 #showcase-booking-lizberries .btn {
     margin-top: 15px;
 }
+
+.card-body b {
+	font-weight: bold; 
+}

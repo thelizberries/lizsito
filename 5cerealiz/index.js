@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
         const paragraph = document.querySelector('p span');
         const collapseDiv = document.querySelector('#moreInfoCollapse');
+        const moreInfoText = document.getElementById("loadMoreInfo").textContent;
+        var showLessText = "Show Less";
     
         if (collapseDiv.classList.contains('show')) {
             // Se già aperto, nascondi il contenuto aggiuntivo e ripristina la situazione originale
@@ -37,7 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .then(data => {
                     // Aggiungi il contenuto caricato e il pulsante Show Less
-                    collapseDiv.innerHTML = data + '<br><a href="#" class="text-red text-uppercase font-weight-bold" id="showLess">Show Less</a>';
+                    if (moreInfoText.includes("Maggiori"))
+                        showLessText = "Mostra Meno";
+                    else 
+                        showLessText = "Show Less";
+                    collapseDiv.innerHTML = data + '<br><a href="#" class="text-red text-uppercase font-weight-bold" id="showLess">'+showLessText+'</a>';
                     collapseDiv.classList.add('show');
                     this.style.display = 'none'; // Nascondi il pulsante More Info
     
