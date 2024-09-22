@@ -26,18 +26,17 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <script src="index.js"></script>
 
     <script type="text/javascript">
-        (function(){
-           emailjs.init({
-             publicKey: "oA1QXPusLAHoT-1gn",
-           });
+        (function () {
+            emailjs.init({
+                publicKey: "oA1QXPusLAHoT-1gn",
+            });
         })();
-     </script>
+    </script>
 
 </head>
 
@@ -78,7 +77,7 @@
                         <li><a class="dropdown-item" href="#contactForm">Contact</a></li>
                     </ul>
                 </div>
-            
+
                 <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -88,15 +87,31 @@
 
     <main>
         <section class="background main-pic grid grid-center" id="showcase-background-thelizards">
-            <div class="container text-white container-title">
+            <div class="container text-white container-title position-relative">
                 <h1 class="display-2 mb-3">The Lizards</h1>
                 <div class="row">
-                    <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/artist/5YnIGjxUv0DNzA9doia11J?utm_source=generator&theme=0" 
-                        width="45%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; 
-                        clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                    </iframe>
+
+                    <!-- Lettore Spotify -->
+                    <div class="col-md-12">
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/artist/5YnIGjxUv0DNzA9doia11J?utm_source=generator&theme=0"
+                            width="50%" height="155" frameBorder="0" allowfullscreen="" allow="autoplay; 
+                            clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
+
+                <!-- Riquadro con immagine e testo in alto a destra -->
+                <div class="position-absolute img-container" style="top: 0; right: 0; max-width: 200px; z-index: 1000;">
+                    <div class="card text-white border-0" style="background-color: rgba(0, 0, 0, 0);">
+                        <img src="../thelizards/lizardsPhotos/label_SorryMom_logo_schizzo.png" class="card-img-top"
+                            alt="Sorry Mom logo" style="max-width: 200px;">
+                        <div class="card-body text-center" style="padding-top: 10px;">
+                            <h5 class="card-title">Facciamo parte dell'etichetta <br>Sorry Mom dal 2024!</h5>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -117,22 +132,25 @@
                     <div class="col-12 col-lg-6">
                         <aside class="card box-shadow bg-dark-primary text-white">
                             <div class="card-header p-0">
-                                <img class="cover"
-                                    src="../thelizards/lizardsPhotos/img-bio.jpg"
-                                    alt="The Band">
+                                <img class="cover" src="../thelizards/lizardsPhotos/img-bio.jpg" alt="The Band">
                             </div>
                             <div class="card-body">
                                 <h3>Bio</h3>
                                 <p>
-                                    <span class="font-weight-100"><b>The Lizards</b> sono una rock band milanese nata nel 2004, da subito impegnata nella creazione di brani inediti. 
-                                        Nel 2011, si trasformano in una tribute band internazionale <b>dei Cranberries</b>, un progetto che consente loro di accumulare 
-                                        una vasta esperienza dal vivo su prestigiosi palchi, sia in Italia che all’estero. 
-                                        Parallelamente, continuano a comporre e promuovere la loro musica originale, utilizzando principalmente il web e i social media
+                                    <span class="font-weight-100"><b>The Lizards</b> sono una rock band milanese nata
+                                        nel 2004, da subito impegnata nella creazione di brani inediti.
+                                        Nel 2011, si trasformano in una tribute band internazionale <b>dei
+                                            Cranberries</b>, un progetto che consente loro di accumulare
+                                        una vasta esperienza dal vivo su prestigiosi palchi, sia in Italia che
+                                        all'estero.
+                                        Parallelamente, continuano a comporre e promuovere la loro musica originale,
+                                        utilizzando principalmente il web e i social media
                                         per raggiungere un pubblico sempre più ampio...
                                     </span>
                                 </p>
                                 <!-- More Info Button -->
-                                <a class="text-red text-uppercase font-weight-bold" href="#" id="loadMoreInfo">More Info</a>
+                                <a class="text-red text-uppercase font-weight-bold" href="#" id="loadMoreInfo">More
+                                    Info</a>
                                 <!-- Empty div for dynamic content -->
                                 <div class="collapse mt-3" id="moreInfoCollapse"></div>
                             </div>
@@ -150,24 +168,24 @@
                 <!--<p>Find out more about the latest talent in the industry. Look through their eyes as you see what
                     inspires them to create music. As they go thorugh their musical quest to storm the charts see how
                     each of them deal with roadblocks and the personal struggles they need to overcome.</p>-->
-                    <div class="card-deck mt-5 mb-4 text-center">
-                        <div class="card mb-4 box-shadow border-0 h-500px">
-                            <img src="../thelizards/lizardsPhotos/band/band-kry.png" alt="Kry">
-                            <h4 class="text-red">Kry</h4>
-                        </div>
-                        <div class="card mb-4 box-shadow border-0 h-500px">
-                            <img src="../thelizards/lizardsPhotos/band/band-ste.png" alt="Stefano">
-                            <h4 class="text-red">Stefano</h4>
-                        </div>
-                        <div class="card mb-4 box-shadow border-0 h-500px">
-                            <img src="../thelizards/lizardsPhotos/band/band-tia.png" alt="Mattia">
-                            <h4 class="text-red">Mattia</h4>
-                        </div>
-                        <div class="card mb-4 box-shadow border-0 h-500px">
-                            <img src="../thelizards/lizardsPhotos/band/band-mau.png" alt="Mauro">
-                            <h4 class="text-red">Mauro</h4>
-                        </div>
+                <div class="card-deck mt-5 mb-4 text-center">
+                    <div class="card mb-4 box-shadow border-0 h-500px">
+                        <img src="../thelizards/lizardsPhotos/band/band-kry.png" alt="Kry">
+                        <h4 class="text-red">Kry</h4>
                     </div>
+                    <div class="card mb-4 box-shadow border-0 h-500px">
+                        <img src="../thelizards/lizardsPhotos/band/band-ste.png" alt="Stefano">
+                        <h4 class="text-red">Stefano</h4>
+                    </div>
+                    <div class="card mb-4 box-shadow border-0 h-500px">
+                        <img src="../thelizards/lizardsPhotos/band/band-tia.png" alt="Mattia">
+                        <h4 class="text-red">Mattia</h4>
+                    </div>
+                    <div class="card mb-4 box-shadow border-0 h-500px">
+                        <img src="../thelizards/lizardsPhotos/band/band-mau.png" alt="Mauro">
+                        <h4 class="text-red">Mauro</h4>
+                    </div>
+                </div>
         </section>
 
         <section class="pb-5 pt-5 text-white text-center">
@@ -176,9 +194,10 @@
             <br>
             <!--<h3 class="mt-5 fab fa-twitter"></h3>-->
             <p class="font-weight-100 letter-spacing-4px">
-                <i class="fas fa-quote-left"></i> 
-                We are eagerly waiting to let you listen to our next unreleased song 
-                coming out on our label <a class="text-red" href="https://www.sorrymom.it/it/label">SorryMum!</a> Stay Tuned!!
+                <i class="fas fa-quote-left"></i>
+                We are eagerly waiting to let you listen to our next unreleased song
+                coming out on our label <a class="text-red" rel="noopener" target="_blank"
+                    href="https://www.sorrymom.it/it/label">Sorry Mom!</a> Stay Tuned!!
                 <i class="fas fa-quote-right"></i>
             </p>
             <a class="text-red" href="#">@TheLizards</a>
@@ -187,7 +206,8 @@
         <section class="pb-5 pt-5 bg-dark-secondary text-white text-center">
             <h2 class="text-uppercase display-4">Contact Us</h2>
             <hr class="hr-red">
-            <form class="text-left container mt-5" id="contactForm" action="#" method="POST" onsubmit="sendEmail(); return false;">
+            <form class="text-left container mt-5" id="contactForm" action="#" method="POST"
+                onsubmit="sendEmail(); return false;">
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <div class="form-group position-relative">
@@ -203,7 +223,8 @@
                     </div>
                     <div class="col-12">
                         <div class="form-group position-relative">
-                            <input class="form-outline-gray" name="emailaddress" id="emailaddress" type="email" required>
+                            <input class="form-outline-gray" name="emailaddress" id="emailaddress" type="email"
+                                required>
                             <label class="label-absolute" for="emailaddress">Email</label>
                         </div>
 
@@ -239,31 +260,31 @@
                     message: document.getElementById('message').value,
                     to_name: "The Lizards"
                 };
-            
+
                 emailjs.send('service_yxbmrgh', 'template_a3t772a', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    // Mostra il messaggio di successo
-                    const messageText = document.getElementById('responseMessageText');
-                    messageText.innerText = 'Email sent successfully!';
-                    messageText.className = 'text-success'; // Cambia il colore del testo a verde
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        // Mostra il messaggio di successo
+                        const messageText = document.getElementById('responseMessageText');
+                        messageText.innerText = 'Email sent successfully!';
+                        messageText.className = 'text-success'; // Cambia il colore del testo a verde
 
-                    document.getElementById('responseMessage').style.display = 'block';
+                        document.getElementById('responseMessage').style.display = 'block';
 
-                    document.getElementById('contactForm').reset();
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    // Mostra il messaggio di errore
-                    const messageText = document.getElementById('responseMessageText');
-                    messageText.innerText = 'Error sending email, please try again.';
-                    messageText.className = 'text-danger'; // Cambia il colore del testo a rosso
-                    
-                    document.getElementById('responseMessage').style.display = 'block';
-                });
+                        document.getElementById('contactForm').reset();
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                        // Mostra il messaggio di errore
+                        const messageText = document.getElementById('responseMessageText');
+                        messageText.innerText = 'Error sending email, please try again.';
+                        messageText.className = 'text-danger'; // Cambia il colore del testo a rosso
 
-                setTimeout(function() {
+                        document.getElementById('responseMessage').style.display = 'block';
+                    });
+
+                setTimeout(function () {
                     document.getElementById('responseMessage').style.display = 'none';
-                }, 5000); 
+                }, 5000);
             }
         </script>
 
@@ -274,7 +295,7 @@
             <small>© The Lizards 2024-2025. All rights reserved.</small>
             <ul class="list-unstyled d-flex p-0 m-0">
                 <li class="p-3">
-                    <a title="The Lizards Facebook social page" class="a-footer text-white text-decoration-none" 
+                    <a title="The Lizards Facebook social page" class="a-footer text-white text-decoration-none"
                         rel="noopener" target="_blank" href="https://www.facebook.com/TheLizardsMilano">
                         <i class="fab fa-facebook"></i>
                     </a>
@@ -286,7 +307,7 @@
                         rel="noopener" target="_blank" href="https://www.instagram.com/thelizardsmilano">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a title="The Lizards spotify channel" class="a-footer text-white text-decoration-none" 
+                    <a title="The Lizards spotify channel" class="a-footer text-white text-decoration-none"
                         rel="noopener" target="_blank" href="https://open.spotify.com/artist/5YnIGjxUv0DNzA9doia11J">
                         <i class="fab fa-spotify"></i>
                     </a>
@@ -295,4 +316,5 @@
         </div>
     </footer>
 </body>
+
 </html>
