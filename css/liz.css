@@ -511,3 +511,62 @@ a.text-red:hover {
 .card-body b {
 	font-weight: bold; 
 }
+
+/* test css sorry mum */
+.container {
+    position: relative;
+}
+/* Stile di default per desktop */
+.img-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 200px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.img-container .card {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.img-container .card-title {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+/* Stili per dispositivi mobili e tablet */
+@media (max-width: 768px) {
+    .img-container {
+        position: static; /* Cambia il posizionamento da assoluto a statico */
+        max-width: 30%; /* Permette al contenitore di occupare tutta la larghezza disponibile */
+        margin: 20px auto; /* Aggiunge margine superiore e inferiore e centra il contenitore */
+        text-align: center; /* Centra il testo all'interno del contenitore */
+    }
+
+    .img-container .card-title {
+        font-size: 0.75rem; /* Aumenta leggermente la dimensione del testo per una migliore leggibilità */
+    }
+    .card-body .text-center {
+        padding-top: 0px;
+    }
+
+    .img-container .card-body {
+        font-size: 1rem; /* Riduci anche il testo */
+    }
+
+    .img-container img {
+        max-width: 70%; /* Riduci l'immagine per i dispositivi mobili */
+        height: auto;
+    }
+
+    .display-2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Stili generali per l'immagine */
+.img-container img {
+    max-width: 100%;
+    height: auto;
+}
