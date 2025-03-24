@@ -596,3 +596,43 @@ a.text-red:hover {
     max-width: 100%;
     height: auto;
 }
+
+/* Stili per le immagini presenti nel riquadro Press */
+.press-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between images as needed */
+    justify-content: center;
+}
+
+.press-gallery .polaroid {
+    position: relative;
+    /*width: 200px; */
+    padding: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(calc(-5deg + 10deg * var(--rotation)));
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 205px;
+}
+
+.press-gallery .polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.press-gallery .polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    flex-grow: 1;
+}
+
+.press-gallery .polaroid .caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}

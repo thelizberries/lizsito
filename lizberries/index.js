@@ -127,6 +127,14 @@ const images = [
     "../lizberries/lizberriesPhotos/photo_carousel/16-live.jpg"
 ];
 
+const imgPress = [
+    "../lizberries/lizberriesPhotos/pressImages/la-stampa_03_2019.jpg",
+    "../lizberries/lizberriesPhotos/pressImages/la-martesana_05_2024.jpg",
+    "../lizberries/lizberriesPhotos/pressImages/web-lombardia_11_2024.jpg",
+    "../lizberries/lizberriesPhotos/pressImages/la-repubblica_03_2025.jpg",
+    "../lizberries/lizberriesPhotos/pressImages/corriere-milano_03_2025.jpg"
+];
+
 // Funzione per caricare dinamicamente le immagini
 function loadImages() {
     const container = document.getElementById('dynamicImageContainer');
@@ -146,3 +154,41 @@ function loadImages() {
 
 // Carica le immagini al caricamento della pagina
 document.addEventListener('DOMContentLoaded', loadImages);
+
+function loadPressImages() {
+    const container = document.getElementById('press-gallery');
+    if (imgPress.length > 0) {
+        imgPress.forEach((prsimage, index) => {
+            // Extract the filename from the image path
+            const filename = prsimage.split('/').pop().split('.')[0];
+            // Apply the transformation rules
+            let altText = filename.split('_')[0].replace(/-/g, ' ');
+            // Capitalize the first character and the character after each space
+            altText = altText.replace(/\b\w/g, char => char.toUpperCase());
+
+            const rotation = Math.random() * 2 - 1;
+            console.log(`Image ${index + 1}: ${prsimage}, Rotation: ${rotation}, Alt Text: ${altText}`);
+
+            const prsimgElement = `
+                <div class="polaroid" style="--rotation: ${rotation}">
+                    <a href="${prsimage}" class="image-link">
+                        <img src="${prsimage}" alt="${altText}" class="img-fluid">
+                    </a>
+                    <div class="caption">${altText}</div>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', prsimgElement);
+        });
+    }
+
+    //Script per aprire le immagini in Press in modalità lightbox 
+    $('.image-link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+}
+
+// Carica le immagini al caricamento della pagina
+document.addEventListener('DOMContentLoaded', loadPressImages);
