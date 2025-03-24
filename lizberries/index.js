@@ -130,16 +130,24 @@ document.addEventListener('DOMContentLoaded', function() {
             //submenu.style.display = 'none';
             submenu.classList.add('hide');
         } else {
-            // Posiziona dinamicamente il sottomenu sotto l'elemento attivo
-            var navItemRect = activeNavItem.getBoundingClientRect();
-            var submenuWidth = submenu.offsetWidth;
-            submenu.style.left = (navItemRect.left) + 'px';
-            submenu.style.top = (navItemRect.bottom) + 'px';
-    
-            // Mostra il sottomenu
-            submenu.style.display = 'block';
-            submenu.classList.remove('hide');
-            submenu.classList.add('show');
+             // Posiziona dinamicamente il sottomenu sotto l'elemento attivo
+             var navItemRect = activeNavItem.getBoundingClientRect();
+             var submenuWidth = submenu.offsetWidth;
+             var navItemWidth = navItemRect.width;
+             var leftPosition = navItemRect.left + (navItemWidth / 2) - (submenuWidth / 2);
+ 
+             // Ensure the submenu is positioned relative to the correct parent element
+             var parentRect = submenu.parentElement.getBoundingClientRect();
+             leftPosition -= parentRect.left - (navItemWidth / 2) - (submenuWidth / 2) +100;
+ 
+             submenu.style.left = leftPosition + 'px';
+             submenu.style.top = navItemRect.bottom - parentRect.top + 'px';
+ 
+     
+             // Mostra il sottomenu
+             submenu.style.display = 'block';
+             submenu.classList.remove('hide');
+             submenu.classList.add('show');
         }
     });
     
