@@ -12,6 +12,48 @@ $(document).ready(function () {
 
 //Script for Bio (more info)
 document.addEventListener('DOMContentLoaded', function() {
+
+    // code for Lazy load iframes
+    var lazyloadIframes = document.querySelectorAll('iframe.lazyload');
+    var lazyloadThrottleTimeout;
+
+    function lazyload() {
+        if (lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+        }
+
+        lazyloadThrottleTimeout = setTimeout(function() {
+            var scrollTop = window.pageYOffset;
+            lazyloadIframes.forEach(function(iframe) {
+                if (iframe.offsetTop < (window.innerHeight + scrollTop)) {
+                    iframe.src = iframe.dataset.src;
+                    iframe.classList.remove('lazyload');
+                }
+            });
+            if (lazyloadIframes.length == 0) {
+                document.removeEventListener('scroll', lazyload);
+                window.removeEventListener('resize', lazyload);
+                window.removeEventListener('orientationChange', lazyload);
+            }
+        }, 20);
+    }
+
+    document.addEventListener('scroll', lazyload);
+    window.addEventListener('resize', lazyload);
+    window.addEventListener('orientationChange', lazyload);
+
+    // Check if the browser supports the scrollbar-width property
+    if (CSS.supports('scrollbar-width', 'thin')) {
+        // Apply the styles dynamically
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .portfolio-item-container {
+                scrollbar-width: thin; /* For Firefox */
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
     document.querySelector('#loadMoreInfo').addEventListener('click', function(event) {
         event.preventDefault();
     

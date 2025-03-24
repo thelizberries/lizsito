@@ -52,12 +52,18 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark-secondary">
             <div class="container">
                 <div class="social-media">
-                    <a href="https://www.facebook.com/TheLizberries" rel="noopener" target="_blank"><i
-                            class="bi-facebook"></i></a>
-                    <a href="https://www.youtube.com/TheLizberries" rel="noopener" target="_blank"><i
-                            class="bi-youtube"></i></a>
-                    <a href="https://instagram.com/thelizberries" rel="noopener" target="_blank"><i
-                            class="bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/TheLizberries" rel="noopener" target="_blank" title="The Lizberries Facebook">
+                        <i class="bi-facebook"></i>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a href="https://www.youtube.com/TheLizberries" rel="noopener" target="_blank" title="The Lizberries YouTube">
+                        <i class="bi-youtube"></i>
+                        <span class="sr-only">YouTube</span>
+                    </a>
+                    <a href="https://instagram.com/thelizberries" rel="noopener" target="_blank" title="The Lizberries Instagram">
+                        <i class="bi-instagram"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
@@ -141,9 +147,9 @@
                         <div>
                             <iframe
                                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheLizberries&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                                width="400" height="500" style="border:none;overflow:hidden" scrolling="no"
-                                frameborder="0" allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                width="400" height="500" class="facebook-iframe" scrolling="no" frameborder="0" allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="The Lizberries Facebook Page">
+                            </iframe>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -460,7 +466,7 @@
                     type="submit" name="send" id="send" value="Send">
             </form>
             <!-- Hidden message that will be displayed on success -->
-            <div id="responseMessage" style="display:none;" class="mt-3">
+            <div id="responseMessage" class="hidden-message mt-3">
                 <p id="responseMessageText"></p>
             </div>
         </section>

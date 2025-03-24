@@ -282,6 +282,26 @@ a.text-red:hover {
     color: rgba(255, 255, 255, 0.75);
 }
 
+.spotify-iframe {
+    border-radius: 12px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.facebook-iframe {
+    border: none;
+    overflow: hidden;
+}
+
 .portfolio-menu{
 	text-align:center;
 }
@@ -320,7 +340,6 @@ a.text-red:hover {
     overflow-x: auto; /* Scrolling orizzontale */
     white-space: nowrap;
     padding-bottom: 15px;
-    scrollbar-width: thin; /* Per browser compatibili, come Firefox */
 }
 
 .portfolio-item {
@@ -552,8 +571,16 @@ a.text-red:hover {
     transition: all 0.3s ease;
 }
 
-.img-container .card {
+.transparent-bg {
     background-color: rgba(0, 0, 0, 0);
+}
+
+.img-max-width-200 {
+    max-width: 200px;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
 }
 
 .img-container .card-title {
@@ -589,6 +616,10 @@ a.text-red:hover {
     .display-2 {
         font-size: 2.5rem;
     }
+}
+
+.hidden-message {
+    display: none;
 }
 
 /* Stili generali per l'immagine */
@@ -635,4 +666,8 @@ a.text-red:hover {
     margin-top: 10px;
     font-size: 14px;
     color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a background color */
+    padding: 5px; /* Add some padding */
+    border-radius: 5px; /* Add rounded corners */
+    flex-shrink: 0; /* Prevent the caption from shrinking */
 }
