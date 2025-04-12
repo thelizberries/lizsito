@@ -34,6 +34,14 @@ button {
 	background-position: top;
 }
 
+.no-underline {
+    text-decoration: none;
+}
+
+.no-underline:hover {
+    text-decoration: none;
+}
+
 #showcase-background-thelizberries {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
 		url("../lizberries/lizberriesPhotos/theLizberriesHome.jpg");
