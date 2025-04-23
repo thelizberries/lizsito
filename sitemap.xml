@@ -7,12 +7,6 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-    <url>
-        <loc>https://www.thelizards.it/index.html</loc>
-        <lastmod>2025-04-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
 
     <!-- Pagine della sezione Lizberries -->
     <url>
@@ -21,22 +15,10 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <url>
-        <loc>https://www.thelizards.it/lizberries/index.html</loc>
-        <lastmod>2025-04-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
 
     <!-- Pagine della sezione 5Cerealiz -->
     <url>
         <loc>https://www.thelizards.it/5cerealiz/</loc>
-        <lastmod>2025-04-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.thelizards.it/5cerealiz/index.html</loc>
         <lastmod>2025-04-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
