@@ -44,15 +44,15 @@ button {
 }
 
 #showcase-background-thelizberries {
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome.jpg")
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome.webp")
 }
 
 #showcase-background-thelizards {
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome.jpg")
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome.webp")
 }
 
 #showcase-background-5cerealiz {
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome.jpg")
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome.webp")
 }
 
 #showcase-background-promo-lizberries {
