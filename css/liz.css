@@ -666,3 +666,24 @@ bi-spotify:focus,
     border-radius: 5px;
     flex-shrink: 0
 }
+
+@media (max-width: 576px) {
+    .card-deck {
+        display: flex;
+        /*flex-direction: column;*/
+        align-items: center;
+    }
+
+    .card-deck .card {
+        width: 100%; /* La card occupa tutta la larghezza disponibile */
+        /*margin-bottom: 20px; /* Spazio tra le card */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .card-deck .card img {
+        width: 100%; /* L'immagine si adatta alla larghezza della card */
+        /*height: auto; */
+        /*object-fit: contain; */
+    }
+}
