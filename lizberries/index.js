@@ -9,8 +9,26 @@ $(document).ready(function () {
     });
 });
 
-//Script for Bio (more info)
 document.addEventListener('DOMContentLoaded', function() {
+
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Mostra o nasconde l'icona in base alla posizione di scorrimento
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) { // Mostra l'icona se l'utente ha scrollato più di 300px
+            backToTopButton.classList.remove('hidden');
+        } else {
+            backToTopButton.classList.add('hidden');
+        }
+    });
+
+    // Torna in cima alla pagina quando l'icona viene cliccata
+    backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
     // code for Lazy load iframes
     var lazyloadIframes = document.querySelectorAll('iframe.lazyload');
@@ -53,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(style);
     }
 
+    // Carica il contenuto aggiuntivo al click del pulsante "More Info"
     document.querySelector('#loadMoreInfo').addEventListener('click', function(event) {
         event.preventDefault();
     
