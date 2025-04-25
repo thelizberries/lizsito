@@ -206,7 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 navbarToggler.style.display = 'block';
             }
             
-            const mobileToggler = socialMediaDiv.nextElementSibling?.classList.contains('navbar-toggler.mobile')
+            const mobileToggler = socialMediaDiv.nextElementSibling?.classList.contains('navbar-toggler') 
+            && socialMediaDiv.nextElementSibling?.classList.contains('mobile')
                 ? socialMediaDiv.nextElementSibling
                 : null;
 
@@ -218,21 +219,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Funzione per gestire il ridimensionamento degli h2
     function adjustHeadingForMobile() {
-        const headings = document.querySelectorAll('h2.display-4'); // Seleziona tutti gli h2 con classe display-4
+        const headings = document.querySelectorAll('h2'); // Seleziona tutti gli h2
 
         headings.forEach(heading => {
             const text = heading.textContent.trim(); // Ottieni il testo del tag h2
             const isMobile = window.innerWidth <= 768; // Verifica se è un dispositivo mobile
 
             if (isMobile && (text.length > 10 && !text.includes(' ') || text.length > 15)) {
-                heading.classList.remove('display-4'); // Rimuovi la classe display-4
-                heading.classList.add('display-5'); // Aggiungi la classe display-5
-                heading.style.textAlign = 'center'; // Centra il testo
+                heading.classList.remove('display-4'); 
+                heading.classList.add('display-5');
+                heading.style.textAlign = 'center'; 
             } else {
                 // Ripristina lo stile originale se non è più un dispositivo mobile
                 heading.classList.remove('display-5');
                 heading.classList.add('display-4');
-                heading.style.textAlign = ''; // Rimuovi l'allineamento
+                heading.style.textAlign = 'center'; 
             }
         });
     }
