@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Funzione per gestire il pulsante navbar-toggler
     function handleNavbarToggler() {
         const navbarToggler = document.querySelector('.navbar-toggler:not(.mobile)'); // Seleziona il pulsante originale
         const socialMediaDiv = document.querySelector('.social-media'); // Seleziona il div con classe "social-media"
@@ -161,9 +162,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Esegui la funzione al caricamento della pagina e al ridimensionamento della finestra
+    // Funzione per gestire il ridimensionamento degli h2
+    function adjustHeadingForMobile() {
+        const headings = document.querySelectorAll('h2.display-4'); // Seleziona tutti gli h2 con classe display-4
+
+        headings.forEach(heading => {
+            const text = heading.textContent.trim(); // Ottieni il testo del tag h2
+            const isMobile = window.innerWidth <= 768; // Verifica se è un dispositivo mobile
+
+            if (isMobile && (text.length > 10 && !text.includes(' ') || text.length > 15)) {
+                heading.classList.remove('display-4'); // Rimuovi la classe display-4
+                heading.classList.add('display-5'); // Aggiungi la classe display-5
+                heading.style.textAlign = 'center'; // Centra il testo
+            } else {
+                // Ripristina lo stile originale se non è più un dispositivo mobile
+                heading.classList.remove('display-5');
+                heading.classList.add('display-4');
+                heading.style.textAlign = ''; // Rimuovi l'allineamento
+            }
+        });
+    }
+
+    // Esegui le funzioni al caricamento della pagina
     handleNavbarToggler();
-    window.addEventListener('resize', handleNavbarToggler);
+    adjustHeadingForMobile();
+
+     // Esegui le funzioni al ridimensionamento della finestra
+    window.addEventListener('resize', function () {
+        handleNavbarToggler();
+        adjustHeadingForMobile();
+    });
     
 });
 

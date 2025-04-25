@@ -43,6 +43,10 @@ button {
     text-decoration: none
 }
 
+.text-center {
+    text-align: center;
+}
+
 #showcase-background-thelizberries {
     background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome.webp")
 }
