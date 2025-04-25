@@ -251,33 +251,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //Script for image carousel
 const images = [
-    "../lizberries/lizberriesPhotos/photo_carousel/13-shooting-24.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/14-shooting-24.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/15-shooting-24.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/1-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/2-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/3-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/4-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/5-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/6-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/7-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/8-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/9-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/10-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/11-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/12-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/13-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/14-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/15-live.jpg",
-    "../lizberries/lizberriesPhotos/photo_carousel/16-live.jpg"
+    "../lizberries/lizberriesPhotos/photo_carousel/13-shooting-24.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/14-shooting-24.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/15-shooting-24.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/1-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/2-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/3-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/4-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/5-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/6-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/7-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/8-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/9-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/10-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/11-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/12-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/13-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/14-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/15-live.webp",
+    "../lizberries/lizberriesPhotos/photo_carousel/16-live.webp"
 ];
 
 const imgPress = [
-    "../lizberries/lizberriesPhotos/pressImages/la-stampa_03_2019.jpg",
-    "../lizberries/lizberriesPhotos/pressImages/la-martesana_05_2024.jpg",
-    "../lizberries/lizberriesPhotos/pressImages/web-lombardia_11_2024.jpg",
-    "../lizberries/lizberriesPhotos/pressImages/la-repubblica_03_2025.jpg",
-    "../lizberries/lizberriesPhotos/pressImages/corriere-milano_03_2025.jpg"
+    "../lizberries/lizberriesPhotos/pressImages/la-stampa_03_2019.webp",
+    "../lizberries/lizberriesPhotos/pressImages/la-martesana_05_2024.webp",
+    "../lizberries/lizberriesPhotos/pressImages/web-lombardia_11_2024.webp",
+    "../lizberries/lizberriesPhotos/pressImages/la-repubblica_03_2025.webp",
+    "../lizberries/lizberriesPhotos/pressImages/corriere-milano_03_2025.webp"
 ];
 
 // Funzione per caricare dinamicamente le immagini
