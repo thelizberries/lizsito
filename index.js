@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-    // $('.portfolio-item').append
     var popup_btn = $('.popup-btn');
     popup_btn.magnificPopup({
         type: 'image',
@@ -12,6 +11,7 @@ $(document).ready(function () {
 
 //Script for Bio (more info)
 document.addEventListener('DOMContentLoaded', function() {
+
     document.querySelector('#loadMoreInfo').addEventListener('click', function(event) {
         event.preventDefault();
     
@@ -108,48 +108,101 @@ document.addEventListener('DOMContentLoaded', function() {
             submenu.classList.add('show');
         }
     });
+
+    function handleNavbarToggler() {
+        const navbarToggler = document.querySelector('.navbar-toggler:not(.mobile)'); // Seleziona il pulsante originale
+        const socialMediaDiv = document.querySelector('.social-media'); // Seleziona il div con classe "social-media"
+
+        if (window.innerWidth <= 768) {
+            // Nascondi il pulsante originale solo se non è già nascosto
+            if (navbarToggler && navbarToggler.style.display !== 'none') {
+                navbarToggler.style.display = 'none';
+            }
+
+            // Crea un nuovo pulsante per dispositivi mobili
+            let mobileToggler = socialMediaDiv.nextElementSibling?.classList.contains('mobile')
+                ? socialMediaDiv.nextElementSibling
+                : null;
+
+            if (!mobileToggler) {
+                // Crea un nuovo pulsante per dispositivi mobili
+                mobileToggler = document.createElement('button');
+                mobileToggler.className = 'navbar-toggler mobile'; // Aggiungi la classe "mobile"
+                mobileToggler.type = 'button';
+                mobileToggler.setAttribute('data-toggle', 'collapse');
+                mobileToggler.setAttribute('data-target', '#navbarCollapse');
+                mobileToggler.setAttribute('aria-controls', 'navbarCollapse');
+                mobileToggler.setAttribute('aria-expanded', 'false');
+                mobileToggler.setAttribute('aria-label', 'Toggle navigation');
+                mobileToggler.innerHTML = '<span class="navbar-toggler-icon"></span>';
+
+                // Inserisci il pulsante mobile subito dopo il div con classe "social-media"
+                socialMediaDiv.insertAdjacentElement('afterend', mobileToggler);
+            }
+        } else {
+            // Mostra il pulsante originale e rimuovi quello mobile
+            if (navbarToggler) {
+                navbarToggler.style.display = 'block';
+            }
+            
+            const mobileToggler = socialMediaDiv.nextElementSibling?.classList.contains('navbar-toggler.mobile')
+                ? socialMediaDiv.nextElementSibling
+                : null;
+
+            if (mobileToggler) {
+                mobileToggler.remove();
+            }
+        }
+    }
+
+    // Esegui la funzione al caricamento della pagina e al ridimensionamento della finestra
+    handleNavbarToggler();
+    window.addEventListener('resize', handleNavbarToggler);
     
     
 });
 
 //Script for image carousel
 const images = [
-    "../lizards/lizardsPhotos/photo_carousel/13-shooting-24.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/14-shooting-24.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/15-shooting-24.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/1-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/2-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/3-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/4-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/5-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/6-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/7-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/8-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/9-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/10-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/11-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/12-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/13-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/14-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/15-live.jpg",
-    "../lizards/lizardsPhotos/photo_carousel/16-live.jpg"
+    "thelizards/lizardsPhotos/photo_carousel/4-_IMG6678-Edit-SharpenAI-Motion.jpg",
+    "thelizards/lizardsPhotos/photo_carousel/5-_IMG6680-Enhanced-NR-Edit-SharpenAI-Motion.jpg",
+    "thelizards/lizardsPhotos/photo_carousel/6-_IMG6684-Edit-SharpenAI-Motion.jpg",
+    "thelizards/lizardsPhotos/photo_carousel/7-_IMG6687-Edit-SharpenAI-Motion.jpg",
+    "thelizards/lizardsPhotos/photo_carousel/8-_IMG6690-Edit-SharpenAI-Motion.jpg",
+    "thelizards/lizardsPhotos/photo_carousel/9-_IMG6696-Edit-SharpenAI-Motion.jpg",
+    "thelizards/lizardsPhotos/photo_carousel/10-_IMG6699-Edit-SharpenAI-Motion.jpg",
+    "thelizards/lizardsPhotos/photo_carousel/11-_IMG6707-Edit-SharpenAI-Motion.jpg",
+    "thelizards/lizardsPhotos/photo_carousel/12-_IMG6720-Edit-SharpenAI-Motion.jpg"
 ];
 
 // Funzione per caricare dinamicamente le immagini
 function loadImages() {
     const container = document.getElementById('dynamicImageContainer');
+
+    let picCount = 1;
+
     if (images.length > 0) {
         images.forEach(image => {
             const imgElement = `
                 <div class="item">
-                    <a href="${image}" class="fancylight popup-btn" data-fancybox-group="light">
+                    <a href="${image}" class="fancylight popup-btn" data-fancybox-group="light"
+                    aria-label="Visualizza l'immagine ${picCount} della galleria fotografica">
                         <img class="img-fluid max-height-155" src="${image}" alt="">
                     </a>
                 </div>
             `;
             container.insertAdjacentHTML('beforeend', imgElement);
+            picCount++;
         });
     }
+
+    //Script per aprire le immagini in Press in modalità lightbox 
+    $('.image-link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
 }
 
 // Carica le immagini al caricamento della pagina

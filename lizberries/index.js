@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-    // $('.portfolio-item').append
     var popup_btn = $('.popup-btn');
     popup_btn.magnificPopup({
         type: 'image',
@@ -150,7 +149,56 @@ document.addEventListener('DOMContentLoaded', function() {
              submenu.classList.add('show');
         }
     });
-    
+
+    function handleNavbarToggler() {
+        const navbarToggler = document.querySelector('.navbar-toggler:not(.mobile)'); // Seleziona il pulsante originale
+        const socialMediaDiv = document.querySelector('.social-media'); // Seleziona il div con classe "social-media"
+
+        if (window.innerWidth <= 768) {
+            // Nascondi il pulsante originale solo se non è già nascosto
+            if (navbarToggler && navbarToggler.style.display !== 'none') {
+                navbarToggler.style.display = 'none';
+            }
+
+            // Crea un nuovo pulsante per dispositivi mobili
+            let mobileToggler = socialMediaDiv.nextElementSibling?.classList.contains('mobile')
+                ? socialMediaDiv.nextElementSibling
+                : null;
+
+            if (!mobileToggler) {
+                // Crea un nuovo pulsante per dispositivi mobili
+                mobileToggler = document.createElement('button');
+                mobileToggler.className = 'navbar-toggler mobile'; // Aggiungi la classe "mobile"
+                mobileToggler.type = 'button';
+                mobileToggler.setAttribute('data-toggle', 'collapse');
+                mobileToggler.setAttribute('data-target', '#navbarCollapse');
+                mobileToggler.setAttribute('aria-controls', 'navbarCollapse');
+                mobileToggler.setAttribute('aria-expanded', 'false');
+                mobileToggler.setAttribute('aria-label', 'Toggle navigation');
+                mobileToggler.innerHTML = '<span class="navbar-toggler-icon"></span>';
+
+                // Inserisci il pulsante mobile subito dopo il div con classe "social-media"
+                socialMediaDiv.insertAdjacentElement('afterend', mobileToggler);
+            }
+        } else {
+            // Mostra il pulsante originale e rimuovi quello mobile
+            if (navbarToggler) {
+                navbarToggler.style.display = 'block';
+            }
+            
+            const mobileToggler = socialMediaDiv.nextElementSibling?.classList.contains('navbar-toggler.mobile')
+                ? socialMediaDiv.nextElementSibling
+                : null;
+
+            if (mobileToggler) {
+                mobileToggler.remove();
+            }
+        }
+    }
+
+    // Esegui la funzione al caricamento della pagina e al ridimensionamento della finestra
+    handleNavbarToggler();
+    window.addEventListener('resize', handleNavbarToggler);
     
 });
 
@@ -188,16 +236,21 @@ const imgPress = [
 // Funzione per caricare dinamicamente le immagini
 function loadImages() {
     const container = document.getElementById('dynamicImageContainer');
+
+    let picCount = 1;
+
     if (images.length > 0) {
         images.forEach(image => {
             const imgElement = `
                 <div class="item">
-                    <a href="${image}" class="fancylight popup-btn" data-fancybox-group="light">
+                    <a href="${image}" class="fancylight popup-btn" data-fancybox-group="light"
+                    aria-label="Visualizza l'immagine ${picCount} della galleria fotografica">
                         <img class="img-fluid max-height-155" src="${image}" alt="">
                     </a>
                 </div>
             `;
             container.insertAdjacentHTML('beforeend', imgElement);
+            picCount++;
         });
     }
 }
@@ -207,6 +260,9 @@ document.addEventListener('DOMContentLoaded', loadImages);
 
 function loadPressImages() {
     const container = document.getElementById('press-gallery');
+
+    let picPressCount = 1;
+
     if (imgPress.length > 0) {
         imgPress.forEach((prsimage, index) => {
             // Extract the filename from the image path
@@ -217,17 +273,18 @@ function loadPressImages() {
             altText = altText.replace(/\b\w/g, char => char.toUpperCase());
 
             const rotation = Math.random() * 2 - 1;
-            console.log(`Image ${index + 1}: ${prsimage}, Rotation: ${rotation}, Alt Text: ${altText}`);
+            //console.log(`Image ${index + 1}: ${prsimage}, Rotation: ${rotation}, Alt Text: ${altText}`);
 
             const prsimgElement = `
                 <div class="polaroid" style="--rotation: ${rotation}">
-                    <a href="${prsimage}" class="image-link">
+                    <a href="${prsimage}" class="image-link" aria-label="Visualizza l'immagine ${picPressCount} della sezione Press">
                         <img src="${prsimage}" alt="${altText}" class="img-fluid">
                     </a>
                     <div class="caption">${altText}</div>
                 </div>
             `;
             container.insertAdjacentHTML('beforeend', prsimgElement);
+            picPressCount++;
         });
     }
 

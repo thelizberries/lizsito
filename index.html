@@ -5,7 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liz's Projects - The Lizards</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="The Lizards, Scopri di più.">
+    <meta name="keywords"
+        content="The Lizards, Italian rock band, band live, Milano, Sorry Mom, Marco Biondi, celtic, rock">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="The Lizards - Italian Rock Band">
+    <meta property="og:description"
+        content="Emotions and music with the best The Lizards songs. Discover dates and live content.">
+    <meta property="og:image" content="https://www.thelizards.it/thelizards/lizardsPhotos/theLizardsHome.webp">
+    <meta property="og:url" content="https://www.thelizards.it/index.html">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="website">
+
     <link rel="canonical" href="https://www.thelizards.it/">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -13,6 +29,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="css/liz.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -28,6 +45,7 @@
         crossorigin="anonymous"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="index.js"></script>
 
@@ -80,6 +98,7 @@
                         <li><a class="dropdown-item" href="#showcase-bio-thelizards">Bio</a></li>
                         <li><a class="dropdown-item" href="#showcase-band-thelizards">The Band</a></li>
                         <li><a class="dropdown-item" href="#showcase-gigs-thelizards">Live Gigs</a></li>
+                        <li><a class="dropdown-item" href="#showcase-photos-thelizards">Latest Photos</a></li>
                         <li><a class="dropdown-item" href="#contactForm">Contact</a></li>
                     </ul>
                 </div>
@@ -87,7 +106,6 @@
                 <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            -->
             </div>
         </nav>
     </header>
@@ -204,6 +222,32 @@
                 </p>
             </div>
         </section>
+
+        <section class="background pb-5 pt-5 text-white text-center bg-dark-secondary" id="showcase-photos-thelizards">
+            <div class="container">
+                <h2 class="text-uppercase display-4">Latest Band Photos</h2>
+                <hr class="hr-red">
+                <!-- <p>Check out our most beautiful photos on the greatest stages in Italy and our tours abroad.</p> -->
+
+                <!-- Container con pulsanti di scorrimento -->
+                <div class="portfolio-wrapper position-relative">
+                    <!-- Pulsante di scorrimento a sinistra -->
+                    <button class="scroll-btn left-scroll position-absolute" id="scrollLeft">&#10094;</button>
+
+                    <!-- Portfolio Item Container -->
+                    <div class="portfolio-item-container overflow-hidden" id="scrollContainer">
+                        <div class="portfolio-item d-flex" id="dynamicImageContainer">
+                            <!-- Le immagini verranno caricate dinamicamente qui -->
+                        </div>
+                    </div>
+
+                    <!-- Pulsante di scorrimento a destra -->
+                    <button class="scroll-btn right-scroll position-absolute" id="scrollRight">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+
         <section class="pb-5 pt-5 text-white text-center">
             <h2 class="text-uppercase display-4">Latest Updates</h2>
             <hr class="hr-red">

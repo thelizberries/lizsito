@@ -115,6 +115,55 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    function handleNavbarToggler() {
+        const navbarToggler = document.querySelector('.navbar-toggler:not(.mobile)'); // Seleziona il pulsante originale
+        const socialMediaDiv = document.querySelector('.social-media'); // Seleziona il div con classe "social-media"
+
+        if (window.innerWidth <= 768) {
+            // Nascondi il pulsante originale solo se non è già nascosto
+            if (navbarToggler && navbarToggler.style.display !== 'none') {
+                navbarToggler.style.display = 'none';
+            }
+
+            // Crea un nuovo pulsante per dispositivi mobili
+            let mobileToggler = socialMediaDiv.nextElementSibling?.classList.contains('mobile')
+                ? socialMediaDiv.nextElementSibling
+                : null;
+
+            if (!mobileToggler) {
+                // Crea un nuovo pulsante per dispositivi mobili
+                mobileToggler = document.createElement('button');
+                mobileToggler.className = 'navbar-toggler mobile'; // Aggiungi la classe "mobile"
+                mobileToggler.type = 'button';
+                mobileToggler.setAttribute('data-toggle', 'collapse');
+                mobileToggler.setAttribute('data-target', '#navbarCollapse');
+                mobileToggler.setAttribute('aria-controls', 'navbarCollapse');
+                mobileToggler.setAttribute('aria-expanded', 'false');
+                mobileToggler.setAttribute('aria-label', 'Toggle navigation');
+                mobileToggler.innerHTML = '<span class="navbar-toggler-icon"></span>';
+
+                // Inserisci il pulsante mobile subito dopo il div con classe "social-media"
+                socialMediaDiv.insertAdjacentElement('afterend', mobileToggler);
+            }
+        } else {
+            // Mostra il pulsante originale e rimuovi quello mobile
+            if (navbarToggler) {
+                navbarToggler.style.display = 'block';
+            }
+            
+            const mobileToggler = socialMediaDiv.nextElementSibling?.classList.contains('navbar-toggler.mobile')
+                ? socialMediaDiv.nextElementSibling
+                : null;
+
+            if (mobileToggler) {
+                mobileToggler.remove();
+            }
+        }
+    }
+
+    // Esegui la funzione al caricamento della pagina e al ridimensionamento della finestra
+    handleNavbarToggler();
+    window.addEventListener('resize', handleNavbarToggler);
     
 });
 
