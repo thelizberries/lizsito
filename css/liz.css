@@ -133,6 +133,14 @@ button {
     margin-bottom: 40px
 }
 
+.btn-wrapper-info-tour {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+*, :
+
 .btn-wrapper {
     display: flex;
     justify-content: center;

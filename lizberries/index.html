@@ -145,12 +145,27 @@
                     </div>
                 </a>
             </div>
-        </section>
-
+        </section>        
+        
         <section class="pb-5 pt-5 bg-dark-secondary" id="showcase-bio-thelizberries">
             <div class="container">
                 <div class="row">
+                    <!-- Prima colonna: Irish Summer Tour 2025 e Noticeboard -->
                     <div class="col-12 col-lg-6 text-white text-center">
+                        <h2 class="text-uppercase display-6">Irish Summer Tour 2025</h2>
+                        <hr class="hr-red">                        <div class="image-container">
+                            <a href="../lizberries/lizberriesPhotos/irlanda25.webp" class="image-popup" title="Irish Summer Tour 2025">
+                                <img src="../lizberries/lizberriesPhotos/irlanda25.webp" 
+                                alt="Irish Summer Tour 2025" class="img-fluid_tqol">
+                            </a>
+                            <div class="btn-wrapper-info-tour">
+                                <p class="font-weight-100 mt-3 text-center text-uppercase mx-auto">
+                                    Visit our <a class="text-red" href="#showcase-background-live-lizberries">On Tour</a> section to book your ticket
+                                </p>
+                            </div>
+                        </div>
+
+                    <!-- Seconda colonna: Noticeboard -->
                         <h2 class="text-uppercase display-4">Noticeboard</h2>
                         <hr class="hr-red">
                         <!-- Nuovo Div -->
@@ -547,10 +562,22 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                 </li>
-            </ul>
-        </div>
+            </ul>        </div>
     </footer>
     <!-- partial -->
+
+    <script>
+        $(document).ready(function() {
+            $('.image-popup').magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                mainClass: 'mfp-img-mobile',
+                image: {
+                    verticalFit: true
+                }
+            });
+        });
+    </script>
 
 </body>
 
