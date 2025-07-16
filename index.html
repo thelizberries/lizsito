@@ -21,6 +21,12 @@
     <meta property="og:type" content="website">
 
     <link rel="canonical" href="https://www.thelizards.it/">
+    
+    <!-- Preconnect per migliorare le performance di caricamento -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://open.spotify.com">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
@@ -30,16 +36,14 @@
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="css/liz.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Rimuoviamo lo script jQuery duplicato e utilizziamo solo la versione slim con defer -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous" defer></script>
+    <!-- Utilizziamo solo bootstrap.bundle che include già popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
@@ -57,6 +61,63 @@
         })();
     </script>
 
+    <!-- Schema.org markup per The Lizards -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "The Lizards",
+        "url": "https://www.thelizards.it/",
+        "logo": "https://www.thelizards.it/thelizards/lizardsPhotos/logo_titolo.png",
+        "image": "https://www.thelizards.it/thelizards/lizardsPhotos/theLizardsHome.webp",
+        "description": "The Lizards sono una rock band milanese nata nel 2004, da subito impegnata nella creazione di brani inediti.",
+        "genre": ["Rock", "Alternative Rock", "Celtic Rock"],
+        "foundingDate": "2004",
+        "foundingLocation": {
+            "@type": "Place",
+            "name": "Milano, Italia"
+        },
+        "member": [
+            {
+                "@type": "Person",
+                "name": "Kry"
+            },
+            {
+                "@type": "Person",
+                "name": "Stefano"
+            },
+            {
+                "@type": "Person",
+                "name": "Mattia"
+            },
+            {
+                "@type": "Person",
+                "name": "Mauro"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/TheLizardsMilano",
+            "https://www.youtube.com/thelizardsrock",
+            "https://www.instagram.com/thelizardsmilano",
+            "https://open.spotify.com/artist/5YnIGjxUv0DNzA9doia11J"
+        ],
+        "event": {
+            "@type": "Event",
+            "name": "The Lizards Live at Rock'N'Roll",
+            "startDate": "2025-05-07T20:00",
+            "location": {
+                "@type": "Place",
+                "name": "Rock'N'Roll",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Milano",
+                    "addressRegion": "MI",
+                    "addressCountry": "IT"
+                }
+            }
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -138,7 +199,7 @@
                 <div class="position-absolute img-container">
                     <div class="card text-white border-0 transparent-bg">
                         <img src="../thelizards/lizardsPhotos/label_SorryMom_logo_schizzo.webp"
-                            class="card-img-top img-max-width-200" alt="Sorry Mom logo">
+                            class="card-img-top img-max-width-200" alt="Sorry Mom Records Logo - Etichetta discografica dei The Lizards" loading="lazy">
                         <div class="card-body text-center padding-top-10">
                             <h5 class="card-title">Facciamo parte dell'etichetta <br>Sorry Mom dal 2024!</h5>
                         </div>
@@ -165,7 +226,7 @@
                     <div class="col-12 col-lg-6">
                         <aside class="card box-shadow bg-dark-primary text-white">
                             <div class="card-header p-0">
-                                <img class="cover" src="../thelizards/lizardsPhotos/img-bio.webp" alt="The Band">
+                                <img class="cover" src="../thelizards/lizardsPhotos/img-bio.webp" alt="The Lizards band photo - Foto del gruppo" loading="lazy">
                             </div>
                             <div class="card-body">
                                 <h3>Bio</h3>
@@ -203,19 +264,19 @@
                     each of them deal with roadblocks and the personal struggles they need to overcome.</p>-->
                 <div class="card-deck mt-5 mb-4 text-center">
                     <div class="card mb-4 box-shadow border-0 h-500px">
-                        <img src="../thelizards/lizardsPhotos/band/band-kry.webp" alt="Kry">
+                        <img src="../thelizards/lizardsPhotos/band/band-kry.webp" alt="Kry - Cantante dei The Lizards" loading="lazy">
                         <h4 class="text-red">Kry</h4>
                     </div>
                     <div class="card mb-4 box-shadow border-0 h-500px">
-                        <img src="../thelizards/lizardsPhotos/band/band-ste.webp" alt="Stefano">
+                        <img src="../thelizards/lizardsPhotos/band/band-ste.webp" alt="Stefano - Chitarrista dei The Lizards" loading="lazy">
                         <h4 class="text-red">Stefano</h4>
                     </div>
                     <div class="card mb-4 box-shadow border-0 h-500px">
-                        <img src="../thelizards/lizardsPhotos/band/band-tia.webp" alt="Mattia">
+                        <img src="../thelizards/lizardsPhotos/band/band-tia.webp" alt="Mattia - Bassista dei The Lizards" loading="lazy">
                         <h4 class="text-red">Mattia</h4>
                     </div>
                     <div class="card mb-4 box-shadow border-0 h-500px">
-                        <img src="../thelizards/lizardsPhotos/band/band-mau.webp" alt="Mauro">
+                        <img src="../thelizards/lizardsPhotos/band/band-mau.webp" alt="Mauro - Batterista dei The Lizards" loading="lazy">
                         <h4 class="text-red">Mauro</h4>
                     </div>
                 </div>

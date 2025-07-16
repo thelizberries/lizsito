@@ -4,7 +4,8 @@
 <head>
     <title>Liz's Projects - The Lizberries - The Cranberries Tribute Band</title>
     <meta charset="UTF-8">
-    <meta name="description"
+    <me                <img title="The Lizberries - Cranberries tribute band Logo" class="display-2 mb-3"
+                    src="../lizberries/lizberriesPhotos/logo_titolo.webp" alt="The Lizberries Logo - Tribute band dei The Cranberries" loading="lazy"> name="description"
         content="The Lizberries, il miglior tributo italiano ai The Cranberries. Emozioni live, energia sul palco e grande musica per veri fan. Scopri di più sui The Lizberries - Cranberries tribute band.">
     <meta name="keywords"
         content="The Cranberries, Cranberries tribute band, Zombie, Dreams, Linger, Lizberries, cover band Cranberries, Dolores O'Riordan cover, tribute band Milano, band live">
@@ -21,6 +22,12 @@
 
     <link rel="canonical" href="https://www.thelizards.it/lizberries/">
     <link rel="icon" type="image/x-icon" href="../lizberries/images/favicon.png">
+    
+    <!-- Preconnect per migliorare le performance di caricamento -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://open.spotify.com">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
@@ -30,16 +37,14 @@
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="../css/magnific-popup.css">
     <link rel="stylesheet" href="../css/liz.css">
-    <script src="../js/jquery-3.7.1.min.js"></script>
+    <!-- Rimuoviamo lo script jQuery duplicato e utilizziamo solo la versione slim -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous" defer></script>
+    <!-- Utilizziamo solo bootstrap.bundle che include già popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
@@ -57,6 +62,33 @@
         })();
     </script>
 
+    <!-- Schema.org markup per The Lizberries -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "The Lizberries",
+        "alternateName": "The Cranberries Tribute Band",
+        "url": "https://www.thelizards.it/lizberries/",
+        "logo": "https://www.thelizards.it/lizberries/lizberriesPhotos/logo_titolo.webp",
+        "image": "https://www.thelizards.it/lizberries/lizberriesPhotos/theLizberriesHome.jpg",
+        "description": "The Lizberries sono il miglior tributo italiano ai The Cranberries. Emozioni live, energia sul palco e grande musica per veri fan.",
+        "genre": ["Rock", "Alternative Rock", "Irish Rock"],
+        "parentOrganization": {
+            "@type": "MusicGroup",
+            "name": "The Lizards",
+            "url": "https://www.thelizards.it/"
+        },
+        "sameAs": [
+            "https://www.facebook.com/TheLizberries",
+            "https://www.instagram.com/thelizberries"
+        ],
+        "performsAs": {
+            "@type": "MusicGroup",
+            "name": "The Cranberries"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -164,7 +196,7 @@
                         <hr class="hr-red">                        <div class="image-container">
                             <a href="../lizberries/lizberriesPhotos/irlanda25.webp" class="image-popup" title="Irish Summer Tour 2025">
                                 <img src="../lizberries/lizberriesPhotos/irlanda25.webp" 
-                                alt="Irish Summer Tour 2025" class="img-fluid_tqol">
+                                alt="Irish Summer Tour 2025 - The Lizberries in Irlanda" class="img-fluid_tqol" loading="lazy">
                             </a>
                             <div class="btn-wrapper-info-tour">
                                 <p class="font-weight-100 mt-3 text-center text-uppercase mx-auto">
