@@ -36,42 +36,4 @@
             <image:title>5CereaLiz Home</image:title>
         </image:image>
     </url>
-    
-    <!-- Pagine di contatto -->
-    <url>
-        <loc>https://www.thelizards.it/contatti/</loc>
-        <lastmod>2025-07-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Pagine delle gallerie fotografiche -->
-    <url>
-        <loc>https://www.thelizards.it/thelizards/gallery/</loc>
-        <lastmod>2025-07-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.thelizards.it/lizberries/gallery/</loc>
-        <lastmod>2025-07-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.thelizards.it/5cerealiz/gallery/</loc>
-        <lastmod>2025-07-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <!-- Pagine degli eventi -->
-    <url>
-        <loc>https://www.thelizards.it/events/</loc>
-        <lastmod>2025-07-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
 </urlset>
