@@ -1,26 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <!-- Pagine del dominio principale -->
     <url>
         <loc>https://www.thelizards.it/</loc>
-        <lastmod>2025-04-13</lastmod>
-        <changefreq>daily</changefreq>
+        <lastmod>2025-07-16</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.thelizards.it/thelizards/lizardsPhotos/theLizardsHome.webp</image:loc>
+            <image:title>The Lizards Home</image:title>
+        </image:image>
     </url>
 
     <!-- Pagine della sezione Lizberries -->
     <url>
         <loc>https://www.thelizards.it/lizberries/</loc>
-        <lastmod>2025-04-13</lastmod>
+        <lastmod>2025-07-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://www.thelizards.it/lizberries/lizberriesPhotos/theLizberriesHome.jpg</image:loc>
+            <image:title>The Lizberries Home</image:title>
+        </image:image>
     </url>
 
     <!-- Pagine della sezione 5Cerealiz -->
     <url>
         <loc>https://www.thelizards.it/5cerealiz/</loc>
-        <lastmod>2025-04-13</lastmod>
+        <lastmod>2025-07-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://www.thelizards.it/5cerealiz/5cerealizPhotos/5CerealizHome.webp</image:loc>
+            <image:title>5CereaLiz Home</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Pagine di contatto -->
+    <url>
+        <loc>https://www.thelizards.it/contatti/</loc>
+        <lastmod>2025-07-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Pagine delle gallerie fotografiche -->
+    <url>
+        <loc>https://www.thelizards.it/thelizards/gallery/</loc>
+        <lastmod>2025-07-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.thelizards.it/lizberries/gallery/</loc>
+        <lastmod>2025-07-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.thelizards.it/5cerealiz/gallery/</loc>
+        <lastmod>2025-07-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Pagine degli eventi -->
+    <url>
+        <loc>https://www.thelizards.it/events/</loc>
+        <lastmod>2025-07-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset>
