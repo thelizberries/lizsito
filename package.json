@@ -7,12 +7,15 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update-sitemap": "node update-sitemap.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@xmldom/xmldom": "^0.9.8"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
