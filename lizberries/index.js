@@ -274,11 +274,15 @@ const images = [
 ];
 
 const imgPress = [
-    "../lizberries/lizberriesPhotos/pressImages/la-stampa_03_2019.webp",
-    "../lizberries/lizberriesPhotos/pressImages/la-martesana_05_2024.webp",
+    "../lizberries/lizberriesPhotos/pressImages/limerick-post_01_2023.webp",
+    "../lizberries/lizberriesPhotos/pressImages/limerick-post_01_2024.webp",
+    "../lizberries/lizberriesPhotos/pressImages/limerick-post_06_2025.webp",
+    "../lizberries/lizberriesPhotos/pressImages/limerick-post_07_2025.webp",
     "../lizberries/lizberriesPhotos/pressImages/web-lombardia_11_2024.webp",
     "../lizberries/lizberriesPhotos/pressImages/la-repubblica_03_2025.webp",
-    "../lizberries/lizberriesPhotos/pressImages/corriere-milano_03_2025.webp"
+    "../lizberries/lizberriesPhotos/pressImages/la-stampa_03_2019.webp",
+    "../lizberries/lizberriesPhotos/pressImages/corriere-milano_03_2025.webp",
+    "../lizberries/lizberriesPhotos/pressImages/la-martesana_05_2024.webp"
 ];
 
 // Funzione per caricare dinamicamente le immagini
