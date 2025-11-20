@@ -1,0 +1,56 @@
+# WORKFLOW DISABILITATO - Da attivare dopo aver verificato la struttura FTP
+# Per attivare: rimuovere il commento dalla riga "on:" e successive
+
+name: Deploy to Aruba FTP
+
+# COMMENTATO TEMPORANEAMENTE - Rimuovi i commenti quando sei pronto
+# on:
+#   push:
+#     branches:
+#       - dev
+#   workflow_dispatch:
+
+# Quando attivo, questo workflow si avvia quando:
+# 1. Fai push sul branch "dev"
+# 2. Lo avvii manualmente da GitHub Actions (workflow_dispatch)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Deploy to Aruba via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          # Credenziali FTP (configurate come GitHub Secrets)
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          
+          # IMPORTANTE: Modifica questo percorso dopo aver verificato la struttura su Aruba
+          # Esempi comuni:
+          # - / (root)
+          # - /htdocs/
+          # - /public_html/
+          # - /www/
+          server-dir: /htdocs/
+          
+          # File e cartelle da ESCLUDERE dal caricamento
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/ImmaginiConversione/**
+            **/.husky/**
+            package.json
+            package-lock.json
+            .gitignore
+            .vscode/**
+          
+          # Opzioni di sicurezza e performance
+          dangerous-clean-slate: false
+          dry-run: false
