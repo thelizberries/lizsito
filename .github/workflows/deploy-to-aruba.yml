@@ -31,13 +31,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           
-          # IMPORTANTE: Modifica questo percorso dopo aver verificato la struttura su Aruba
-          # Esempi comuni:
-          # - / (root)
-          # - /htdocs/
-          # - /public_html/
-          # - /www/
-          server-dir: /htdocs/
+          # Percorso verificato su Aruba FTP
+          # Tutto il contenuto del repository va in /thelizards.it/
+          server-dir: /thelizards.it/
           
           # File e cartelle da ESCLUDERE dal caricamento
           exclude: |
