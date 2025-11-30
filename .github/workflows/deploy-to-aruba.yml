@@ -26,6 +26,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
+          protocol: ftp
           
           # Percorso verificato su Aruba FTP
           # Tutto il contenuto del repository va in /thelizards.it/
