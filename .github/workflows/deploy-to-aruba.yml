@@ -1,14 +1,10 @@
-# WORKFLOW DISABILITATO - Da attivare dopo aver verificato la struttura FTP
-# Per attivare: rimuovere il commento dalla riga "on:" e successive
-
 name: Deploy to Aruba FTP
 
-# COMMENTATO TEMPORANEAMENTE - Rimuovi i commenti quando sei pronto
-# on:
-#   push:
-#     branches:
-#       - dev
-#   workflow_dispatch:
+on:
+   push:
+     branches:
+       - dev
+   workflow_dispatch:
 
 # Quando attivo, questo workflow si avvia quando:
 # 1. Fai push sul branch "dev"
