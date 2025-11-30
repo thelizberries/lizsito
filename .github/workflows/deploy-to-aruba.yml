@@ -1,12 +1,12 @@
 name: Deploy to Aruba FTP
 
 on:
-   push:
-     branches:
-       - dev
-   workflow_dispatch:
+  push:
+    branches:
+      - dev
+  workflow_dispatch:
 
-# Quando attivo, questo workflow si avvia quando:
+# Questo workflow si avvia quando:
 # 1. Fai push sul branch "dev"
 # 2. Lo avvii manualmente da GitHub Actions (workflow_dispatch)
 
