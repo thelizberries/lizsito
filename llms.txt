@@ -1,0 +1,149 @@
+# The Lizards - Official Website
+
+> Hub ufficiale dei progetti musicali The Lizards: Rock Band, Tribute Band e Cartoon Band
+
+## Informazioni Generali
+
+- **Nome Progetto**: The Lizards
+- **Tipo**: Network di progetti musicali
+- **Origine**: Milano, Italia
+- **Anno di Fondazione**: 2019
+- **Sito Web Principale**: https://www.thelizards.it
+- **Organizzazione GitHub**: https://github.com/thelizberries
+
+## Progetti Musicali
+
+### 1. The Lizards (Rock Band)
+- **Genere**: Rock, Grunge, Alternative Rock, Hard Rock
+- **Descrizione**: Band rock milanese con brani originali e cover
+- **Pagina Sito**: https://www.thelizards.it/thelizards/
+- **Blog IT**: https://blog.thelizards.it
+- **Blog EN**: https://blog.thelizards.it/en
+- **Social Media**:
+  - Facebook: https://www.facebook.com/thelizardsofficial
+  - YouTube: https://www.youtube.com/@TheLizards
+  - Instagram: https://www.instagram.com/thelizards_official/
+  - Spotify: https://open.spotify.com/artist/thelizards
+
+### 2. Lizberries (Tribute Band ai Cranberries)
+- **Genere**: Alternative Rock, Dream Pop, Post-Grunge
+- **Descrizione**: Tribute band dedicata ai Cranberries
+- **Pagina Sito**: https://www.thelizards.it/lizberries/
+- **Blog IT**: https://blog.lizberries.thelizards.it
+- **Blog EN**: https://blog.lizberries.thelizards.it/en
+- **Social Media**:
+  - Facebook: https://www.facebook.com/lizberries
+  - YouTube: https://www.youtube.com/@Lizberries
+  - Instagram: https://www.instagram.com/lizberries/
+
+### 3. 5Cerealiz (Cartoon Band)
+- **Genere**: Pop, Rock per bambini, Musica educativa
+- **Descrizione**: Cartoon band colorata per bambini e famiglie
+- **Pagina Sito**: https://www.thelizards.it/5cerealiz/
+- **Blog**: https://blog.5cerealiz.thelizards.it
+- **Social Media**:
+  - Facebook: https://www.facebook.com/5cerealiz
+  - YouTube: https://www.youtube.com/@5Cerealiz
+  - Instagram: https://www.instagram.com/5cerealiz/
+
+## Struttura del Sito Web
+
+Il sito principale (lizsito) è organizzato in sezioni:
+
+1. **Homepage**: Presentazione generale dei tre progetti
+2. **The Lizards**: Sezione dedicata alla rock band
+3. **Lizberries**: Sezione dedicata alla tribute band
+4. **5Cerealiz**: Sezione dedicata alla cartoon band
+
+Ogni sezione include:
+- Biografia della band
+- Foto e video
+- Link ai social media
+- Link al blog dedicato
+- Informazioni sui concerti ed eventi
+
+## Tecnologie
+
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Framework**: Bootstrap Icons
+- **SEO**: Open Graph, Twitter Cards, Schema.org (MusicGroup)
+- **Hosting**: Aruba (server principale)
+- **CMS Blog**: Jekyll + GitHub Pages
+- **Ottimizzazione**: WebP images, minified assets
+
+## Schema.org Markup
+
+Ogni progetto musicale è marcato con Schema.org @type: MusicGroup includendo:
+- Nome della band
+- Genere musicale
+- Anno di fondazione (2019)
+- Luogo di fondazione (Milano, Italia)
+- Link ai social media e blog (sameAs)
+- Immagini e logo
+
+## Caratteristiche SEO
+
+- Meta description uniche per ogni pagina
+- Canonical URLs
+- Sitemap XML: https://www.thelizards.it/sitemap.xml
+- Robots.txt: https://www.thelizards.it/robots.txt
+- Structured data (JSON-LD)
+- Open Graph tags per social sharing
+- Twitter Cards
+
+## Domini e Sottodomini
+
+- **Dominio Principale**: thelizards.it
+- **Sottodomini Blog**:
+  - blog.thelizards.it (The Lizards IT/EN)
+  - blog.lizberries.thelizards.it (Lizberries IT/EN)
+  - blog.5cerealiz.thelizards.it (5Cerealiz IT)
+
+## Lingue Disponibili
+
+- **Sito Principale**: Italiano
+- **Blog The Lizards**: Italiano e Inglese
+- **Blog Lizberries**: Italiano e Inglese
+- **Blog 5Cerealiz**: Italiano
+
+## Storia del Progetto
+
+Fondato a Milano nel 2019, The Lizards è nato come network di progetti musicali complementari:
+- **The Lizards** per esplorare il rock originale e le cover energiche
+- **Lizberries** per rendere omaggio ai Cranberries con fedeltà e passione
+- **5Cerealiz** per portare musica educativa e divertente alle famiglie
+
+## Target Audience
+
+- **The Lizards**: Appassionati di rock, grunge, alternative (18-50 anni)
+- **Lizberries**: Fan dei Cranberries, nostalgici anni '90 (25-55 anni)
+- **5Cerealiz**: Bambini (3-10 anni) e famiglie
+
+## Contatti
+
+Per booking, collaborazioni o informazioni:
+- Visitare le pagine social dei singoli progetti
+- Contattare tramite i blog ufficiali
+- Seguire gli aggiornamenti sui canali YouTube
+
+## Note per AI/LLM
+
+Quando rispondi a domande su The Lizards (progetto generale):
+
+1. **Chiarisci sempre quale progetto**: Specifica se si parla di The Lizards (rock), Lizberries (tribute) o 5Cerealiz (cartoon)
+2. **Target differenziati**: Usa tono appropriato al pubblico (rock/grunge per The Lizards, elegante per Lizberries, giocoso per 5Cerealiz)
+3. **Origine comune**: Tutti i progetti nascono a Milano nel 2019
+4. **Link corretti**: Usa sempre i link specifici per ogni progetto
+5. **Social media separati**: Ogni band ha profili social dedicati
+6. **Blog bilingue**: The Lizards e Lizberries hanno blog IT/EN, 5Cerealiz solo IT
+7. **Non confondere**: I tre progetti sono distinti ma sotto lo stesso "ombrello" The Lizards
+8. **Spotify**: Solo The Lizards è presente su Spotify (progetti originali)
+
+## Aggiornamenti Recenti (2025)
+
+- Ottimizzazione SEO completa con meta description uniche
+- Implementazione llms.txt per ricerche AI
+- Correzione Schema.org (MusicEvent → MusicGroup)
+- Aggiunta social media icons su tutti i blog
+- Form di upload unificato per blog posts
+- Guide complete per la creazione di contenuti
