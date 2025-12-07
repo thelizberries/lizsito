@@ -79,8 +79,21 @@ button {
     background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome.webp")
 }
 
-#showcase-background-thelizards {
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome.webp")
+/* Immagini hero ottimizzate per mobile (caricate solo su mobile) */
+@media (max-width: 768px) {
+    #showcase-background-thelizards {
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome.webp");
+        /* Su mobile usiamo background-size per ridurre qualità */
+        background-size: cover;
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Desktop - immagine full quality */
+@media (min-width: 769px) {
+    #showcase-background-thelizards {
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome.webp")
+    }
 }
 
 #showcase-background-5cerealiz {
