@@ -1,7 +1,15 @@
+/* Ottimizzazioni performance */
+@font-face {
+    font-display: swap;
+}
+
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    background: #182430
+    background: #182430;
+    /* Rendering ottimizzato */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 button {
