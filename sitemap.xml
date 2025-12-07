@@ -35,4 +35,28 @@
             <image:title>5CereaLiz Home</image:title>
         </image:image>
     </url>
+
+    <!-- Blog The Lizards -->
+    <url>
+        <loc>https://blog.thelizards.it/</loc>
+        <lastmod>2025-12-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog The Lizberries -->
+    <url>
+        <loc>https://blog.lizberries.it/</loc>
+        <lastmod>2025-12-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog 5CereaLiz -->
+    <url>
+        <loc>https://blog.5cerealiz.it/</loc>
+        <lastmod>2025-12-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
