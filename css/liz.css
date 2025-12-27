@@ -206,6 +206,21 @@ a.text-red:hover {
     background: transparent
 }
 
+.btn-outline-red:hover {
+    background-color: #f8174b;
+    border-color: #f8174b;
+    color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-gradient:hover {
+    background: linear-gradient(217deg, #ff2a5a, #9d3eb8 70.71%);
+    border-color: #ff2a5a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(248, 23, 75, 0.4);
+    transition: all 0.3s ease;
+}
+
 .form-outline-gray {
     display: block;
     width: 100%;
