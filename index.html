@@ -159,6 +159,7 @@
                         <li><a class="dropdown-item" href="#showcase-band-thelizards">The Band</a></li>
                         <li><a class="dropdown-item" href="#showcase-gigs-thelizards">Live Gigs</a></li>
                         <li><a class="dropdown-item" href="#showcase-photos-thelizards">Latest Photos</a></li>
+                        <li><a class="dropdown-item" href="#showcase-musicopoliz">MusicopoLiz</a></li>
                         <li><a class="dropdown-item" href="#contactForm">Contact</a></li>
                         <li><a class="dropdown-item" href="https://blog.thelizards.it/" target="_blank"
                                 rel="noopener noreferrer">Blog <i class="fas fa-external-link-alt fa-xs"></i></a></li>
@@ -322,7 +323,7 @@
             </div>
         </section>
 
-        <section class="background pb-5 pt-5 text-white text-center bg-dark-secondary" id="showcase-photos-thelizards">
+        <section class="background pb-5 pt-5 text-white text-center" id="showcase-photos-thelizards">
             <div class="container">
                 <h2 class="text-uppercase display-4">Latest Band Photos</h2>
                 <hr class="hr-red">
@@ -347,7 +348,7 @@
         </section>
 
 
-        <section class="pb-5 pt-5 text-white text-center">
+        <section class="pb-5 pt-5 bg-dark-secondary text-white text-center">
             <h2 class="text-uppercase display-4">Latest Updates</h2>
             <hr class="hr-red">
             <br>
@@ -370,6 +371,47 @@
                 <i class="fas fa-quote-right"></i>
             </p>
             <a class="text-red" href="#">@TheLizards</a> -->
+        </section>
+
+        <section class="pb-5 pt-5 text-white text-center" id="showcase-musicopoliz">
+            <div class="container">
+                <h2 class="text-uppercase display-4">MusicopoLiz</h2>
+                <hr class="hr-red">
+                <p class="font-weight-100 letter-spacing-4px">Scarica il nostro esclusivo gioco di società: MusicopoLiz!</p>
+                
+                <div class="row justify-content-center mt-5">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card box-shadow bg-dark-primary text-white">
+                            <div class="card-body">
+                                <img src="MusicopoLiz/Immagine scatola MusicopoLiz.webp" 
+                                     alt="MusicopoLiz Package" 
+                                     class="img-fluid mb-4 rounded musicopoliz-img">
+                                
+                                <form id="musicopolizForm" class="mt-4">
+                                    <div class="form-group position-relative">
+                                        <input class="form-outline-gray" 
+                                               name="downloadPassword" 
+                                               id="downloadPassword" 
+                                               type="password" 
+                                               required>
+                                        <label class="label-absolute" for="downloadPassword">Inserisci la Password</label>
+                                    </div>
+                                    
+                                    <button class="pr-5 pl-5 pt-2 pb-2 btn text-uppercase font-weight-bold text-red btn-outline-red" 
+                                            type="submit">
+                                        <i class="fas fa-download"></i> Scarica MusicopoLiz
+                                    </button>
+                                </form>
+                                
+                                <!-- Messaggio di errore -->
+                                <div id="downloadMessage" class="mt-3" style="display: none;">
+                                    <p id="downloadMessageText"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="pb-5 pt-5 bg-dark-secondary text-white text-center">

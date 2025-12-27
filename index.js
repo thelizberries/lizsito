@@ -253,3 +253,86 @@ function loadImages() {
 
 // Carica le immagini al caricamento della pagina
 document.addEventListener('DOMContentLoaded', loadImages);
+
+// Gestione del form per il download di MusicopoLiz
+// IMPORTANTE: Configura prima il Cloudflare Worker seguendo le istruzioni in MusicopoLiz/worker/SETUP.md
+// Sostituisci l'URL qui sotto con quello del tuo Worker
+const MUSICOPOLIZ_WORKER_URL = 'https://musicopoliz-download.lizberries.workers.dev';
+
+document.addEventListener('DOMContentLoaded', function() {
+    const musicopolizForm = document.getElementById('musicopolizForm');
+    
+    if (musicopolizForm) {
+        musicopolizForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const password = document.getElementById('downloadPassword').value;
+            const messageDiv = document.getElementById('downloadMessage');
+            const messageText = document.getElementById('downloadMessageText');
+            const submitBtn = musicopolizForm.querySelector('button[type="submit"]');
+            
+            // Disabilita il pulsante durante la richiesta
+            submitBtn.disabled = true;
+            
+            // Mostra messaggio di caricamento
+            messageText.textContent = 'Verifica in corso...';
+            messageText.className = 'text-info font-weight-bold';
+            messageDiv.style.display = 'block';
+            
+            try {
+                // Chiama il Cloudflare Worker per validare la password e scaricare il file
+                const response = await fetch(MUSICOPOLIZ_WORKER_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ password: password })
+                });
+                
+                if (response.ok) {
+                    // Password corretta - scarica il file
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'MusicopoLiz.zip';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    window.URL.revokeObjectURL(url);
+                    
+                    // Mostra messaggio di successo
+                    messageText.textContent = 'Download avviato con successo!';
+                    messageText.className = 'text-success font-weight-bold';
+                    
+                    // Reset form dopo 3 secondi
+                    setTimeout(function() {
+                        musicopolizForm.reset();
+                        messageDiv.style.display = 'none';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    // Password errata o altro errore
+                    const errorData = await response.json();
+                    messageText.textContent = errorData.error || 'Errore durante il download';
+                    messageText.className = 'text-danger font-weight-bold';
+                    submitBtn.disabled = false;
+                    
+                    // Nascondi messaggio dopo 3 secondi
+                    setTimeout(function() {
+                        messageDiv.style.display = 'none';
+                    }, 3000);
+                }
+            } catch (error) {
+                console.error('Download error:', error);
+                messageText.textContent = 'Errore di connessione. Riprova.';
+                messageText.className = 'text-danger font-weight-bold';
+                submitBtn.disabled = false;
+                
+                setTimeout(function() {
+                    messageDiv.style.display = 'none';
+                }, 3000);
+            }
+        });
+    }
+});
