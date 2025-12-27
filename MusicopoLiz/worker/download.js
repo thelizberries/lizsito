@@ -81,11 +81,12 @@ export default {
       // OPZIONE 2: Se usi GitHub come storage (più semplice per iniziare)
       // Il file deve essere caricato nel repo GitHub
       const GITHUB_TOKEN = env.GITHUB_TOKEN; // Token con permessi di lettura
-      const GITHUB_OWNER = env.GITHUB_OWNER || 'tuousername'; // Imposta come variabile d'ambiente
-      const GITHUB_REPO = env.GITHUB_REPO || 'LizHub'; // Imposta come variabile d'ambiente
-      const FILE_PATH = 'lizsito/MusicopoLiz/MusicopoLiz.zip';
+      const GITHUB_OWNER = env.GITHUB_OWNER || 'thelizberries'; // Imposta come variabile d'ambiente
+      const GITHUB_REPO = env.GITHUB_REPO || 'lizsito'; // Imposta come variabile d'ambiente
+      const GITHUB_BRANCH = env.GITHUB_BRANCH || 'dev'; // Branch dove si trova il file
+      const FILE_PATH = 'MusicopoLiz/MusicopoLiz.zip';
       
-      const githubUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}`;
+      const githubUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}?ref=${GITHUB_BRANCH}`;
       
       console.log('Tentativo di fetch da:', githubUrl);
       
@@ -104,7 +105,7 @@ export default {
           JSON.stringify({ 
             success: false,
             error: `File non trovato sul server (${githubResponse.status})`,
-            details: `Verifica che il file esista su: ${GITHUB_OWNER}/${GITHUB_REPO}/${FILE_PATH}`
+            details: `Verifica che il file esista su: ${GITHUB_OWNER}/${GITHUB_REPO}/${FILE_PATH} (branch: ${GITHUB_BRANCH})`
           }),
           { 
             status: 404,
