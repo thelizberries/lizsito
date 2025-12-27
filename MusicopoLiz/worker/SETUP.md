@@ -121,3 +121,44 @@ Con la chiamata al worker che verrà aggiunta automaticamente.
 **Errore CORS**
 - Il worker ha già configurato CORS per accettare richieste dal tuo dominio
 - Se necessario, puoi restringere `Access-Control-Allow-Origin` al tuo dominio specifico
+## Statistiche Download
+
+Il Worker traccia automaticamente ogni download con:
+- Contatore totale
+- Timestamp
+- Paese di provenienza  
+- Indirizzo IP
+
+### Configurazione KV Storage
+
+1. **Crea KV Namespace**:
+   - Dal menu laterale sinistro, cerca e clicca su "KV" (o "Workers" > "KV")
+   - In alternativa: nel menu principale cerca "Storage & Databases" o "KV"
+   - Click "Create a namespace"
+   - Nome: `musicopoliz-stats`
+   - Click "Add"
+
+2. **Collega il KV al Worker**:
+   - Torna al tuo Worker `musicopoliz-download`
+   - Click su "Settings" (o "Configure")
+   - Scorri fino a "Bindings" o "Variables and Secrets"
+   - Nella sezione "KV Namespace Bindings":
+     - Click "Add binding"
+     - Variable name: `DOWNLOAD_STATS`
+     - KV namespace: seleziona `musicopoliz-stats` dal menu a tendina
+     - Click "Save"
+   - Dopo aver salvato, fai "Deploy" del worker per applicare le modifiche
+
+### Visualizzare le Statistiche
+
+**Opzione A - Worker Separato (Consigliato)**:
+1. Crea nuovo Worker: `musicopoliz-stats`
+2. Copia contenuto di `stats.js`
+3. Collega stesso KV: `DOWNLOAD_STATS` → `musicopoliz-stats`
+4. Aggiungi variabile: `STATS_PASSWORD` (la tua password per accedere)
+5. Accedi a: `https://musicopoliz-stats.lizberries.workers.dev/?password=@LizXmas2025`
+
+Vedrai una pagina HTML con:
+- Download totali
+- Statistiche per paese
+- Ultimi 50 download con dettagli

@@ -115,13 +115,43 @@ export default {
       }
 
       // Restituisci il file
-      return new Response(githubResponse.body, {
+      const fileResponse = new Response(githubResponse.body, {
         headers: {
           ...corsHeaders,
           'Content-Type': 'application/zip',
           'Content-Disposition': 'attachment; filename="MusicopoLiz.zip"'
         }
       });
+
+      // Traccia il download (solo se il file è stato scaricato con successo)
+      // KV storage è configurato come variabile d'ambiente DOWNLOAD_STATS
+      if (env.DOWNLOAD_STATS) {
+        try {
+          // Incrementa contatore totale
+          const currentCount = await env.DOWNLOAD_STATS.get('total_downloads');
+          const newCount = (parseInt(currentCount) || 0) + 1;
+          await env.DOWNLOAD_STATS.put('total_downloads', newCount.toString());
+          
+          // Salva anche un log con timestamp
+          const timestamp = new Date().toISOString();
+          const logKey = `download_${timestamp}`;
+          await env.DOWNLOAD_STATS.put(logKey, JSON.stringify({
+            timestamp: timestamp,
+            count: newCount,
+            ip: request.headers.get('CF-Connecting-IP') || 'unknown',
+            country: request.headers.get('CF-IPCountry') || 'unknown'
+          }), {
+            expirationTtl: 31536000 // Mantieni per 1 anno
+          });
+          
+          console.log(`Download #${newCount} tracciato con successo`);
+        } catch (statsError) {
+          console.error('Errore nel tracciamento:', statsError);
+          // Non bloccare il download se il tracciamento fallisce
+        }
+      }
+
+      return fileResponse;
 
     } catch (error) {
       console.error('Worker error:', error);
