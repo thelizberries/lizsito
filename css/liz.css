@@ -161,10 +161,11 @@ button {
 }
 
 .btn-wrapper {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-top: 20px;
     max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 40px
 }
 
