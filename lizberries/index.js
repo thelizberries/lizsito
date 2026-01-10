@@ -372,8 +372,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Disable button during request
             submitBtn.disabled = true;
             
-            // Show loading message
-            messageText.textContent = 'Verifying...';
+            // Show loading message with animated spinner
+            messageText.innerHTML = '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Verifying...';
             messageText.className = 'text-info font-weight-bold';
             messageDiv.style.display = 'block';
             

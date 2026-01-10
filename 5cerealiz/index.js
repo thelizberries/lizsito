@@ -260,8 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Disabilita il pulsante durante la richiesta
             submitBtn.disabled = true;
             
-            // Mostra messaggio di caricamento
-            messageText.textContent = 'Verifica in corso...';
+            // Mostra messaggio di caricamento con spinner animato
+            messageText.innerHTML = '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Verifica in corso...';
             messageText.className = 'text-info font-weight-bold';
             messageDiv.style.display = 'block';
             
