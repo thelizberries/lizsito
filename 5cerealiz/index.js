@@ -272,7 +272,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ password: password })
+                    body: JSON.stringify({ 
+                        password: password,
+                        source: '5cerealiz' // Identifica la sezione del sito
+                    })
                 });
                 
                 if (response.ok) {
