@@ -44,33 +44,27 @@
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </noscript>
-    <!-- jQuery completo (non slim) per supportare magnificPopup -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"
-        defer></script>
-    <!-- Utilizziamo solo bootstrap.bundle che include già popper.js -->
+    <!-- jQuery 3.7.1 con fallback locale -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
+        crossorigin="anonymous" defer onerror="this.onerror=null;this.src='../js/jquery-3.7.1.min.js'"></script>
+    <!-- Bootstrap bundle include già popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
-    <!-- Magnific Popup JS -->
+        crossorigin="anonymous" defer></script>
+    <!-- Magnific Popup JS con fallback locale -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
         integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async></script>
-    <script src="../js/jquery.magnific-popup.min.js" defer></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer onerror="this.onerror=null;this.src='../js/jquery.magnific-popup.min.js'"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 
     <script src="index.js" defer></script>
 
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "m4uqbigM6blprHiLS",
-            });
-        })();
+    <script defer>
+        // EmailJS init - executes after all defer scripts load
+        emailjs.init({
+            publicKey: "m4uqbigM6blprHiLS",
+        });
     </script>
 
     <!-- Schema.org markup per The Lizberries -->
