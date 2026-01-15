@@ -899,8 +899,10 @@ bi-spotify:focus,
     font-weight: 600;
 }
 
-.blog-content-cartoon .fas.fa-newspaper {
+.blog-content-cartoon .fas.fa-newspaper,
+.blog-content-cartoon .bi-newspaper {
     color: #000;
+    display: inline-block;
     animation: shake-cartoon 2s infinite;
 }
 
@@ -968,4 +970,24 @@ bi-spotify:focus,
     .blog-content-cartoon p {
         font-size: 0.85rem !important;
     }
+}
+
+/* Bootstrap Icons customization */
+.bi {
+    vertical-align: middle;
+}
+
+/* Quote icon flip for right quote */
+.quote-right {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+/* Icon size utilities */
+.bi-xs {
+    font-size: 0.75rem;
+}
+
+.bi-2x {
+    font-size: 2rem;
 }
