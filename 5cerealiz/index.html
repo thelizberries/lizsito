@@ -495,10 +495,14 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="index.min.js" defer></script>
     
-    <script defer>
-        // EmailJS init - executes after all defer scripts load
-        emailjs.init({
-            publicKey: "eMFqVLczvXK94rFGl",
+    <script>
+        // EmailJS init - wait for window load to ensure all defer scripts are ready
+        window.addEventListener('load', function() {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init({
+                    publicKey: "eMFqVLczvXK94rFGl",
+                });
+            }
         });
     </script>
 </body>
