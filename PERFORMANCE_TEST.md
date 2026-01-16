@@ -1,0 +1,176 @@
+# 📊 Performance Testing - LizHub Websites
+
+## Test da eseguire
+
+### 🔗 PageSpeed Insights
+**URL Test:** https://pagespeed.web.dev/
+
+**Siti da testare:**
+1. **The Lizards**: https://www.thelizards.it/
+2. **5CereaLiz**: https://www.thelizards.it/5cerealiz/
+3. **The Lizberries**: https://www.thelizards.it/lizberries/
+
+---
+
+## 📋 Metriche da Monitorare
+
+### Core Web Vitals
+- **LCP (Largest Contentful Paint)**: < 2.5s (green)
+- **FID (First Input Delay)**: < 100ms (green)  
+- **CLS (Cumulative Layout Shift)**: < 0.1 (green)
+
+### Performance Metrics
+- **FCP (First Contentful Paint)**: < 1.8s
+- **SI (Speed Index)**: < 3.4s
+- **TBT (Total Blocking Time)**: < 200ms
+- **TTI (Time to Interactive)**: < 3.8s
+
+### Resource Analysis
+- **Total Resources Size**: controllare dimensione totale
+- **Number of Requests**: controllare numero richieste
+- **Images**: dimensione e formato
+- **JavaScript**: size e parsing time
+- **CSS**: size e render-blocking
+
+---
+
+## ✅ Ottimizzazioni Implementate (da verificare impatto)
+
+### 1. JavaScript Optimization
+- ✅ jQuery 3.6.0 → 3.7.1
+- ✅ CDN con fallback locale
+- ✅ Minificazione JS (56-60% compression)
+- ✅ Script defer applicato
+
+### 2. CSS Optimization
+- ✅ Minificazione CSS (32% compression)
+- ✅ Critical CSS inline per FCP
+- ✅ Non-critical CSS con media="print" + onload
+
+### 3. Image Optimization
+- ✅ Lazy loading (loading="lazy")
+- ✅ Width/height attributes (CLS prevention)
+- ✅ WebP format
+- ✅ Preload per LCP images
+
+### 4. Icons Optimization
+- ✅ FontAwesome rimosso (~75 KB saved)
+- ✅ Bootstrap Icons (già caricato, 0 KB extra)
+
+### 5. Resource Hints
+- ✅ preconnect per CDN critici
+- ✅ dns-prefetch per CDN secondari
+- ✅ preload per CSS e immagini LCP
+
+### 6. EmailJS Fix
+- ✅ Initialization timing con window.addEventListener('load')
+- ✅ typeof check per safety
+
+### 7. Other
+- ✅ Duplicate scripts removed (popper.js, magnific-popup local)
+
+**Total Savings:** ~108 KB (75 KB FontAwesome + 33 KB minification)
+
+---
+
+## 📝 Template Risultati Test
+
+### The Lizards (https://www.thelizards.it/)
+
+**Mobile:**
+- Performance: 56/100
+- LCP: 15,7 s (rosso)
+- FID: 120 ms parametro TBT (verde)
+- CLS: 0
+
+**Desktop:**
+- Performance: 98/100
+- LCP: 0,8 s
+- FID: 60 ms parametro TBT (verde)
+- CLS: 0.004
+
+**Opportunità principali:**
+- [ ] ...
+- [ ] ...
+
+---
+
+### 5CereaLiz (https://www.thelizards.it/5cerealiz/)
+
+**Mobile:**
+- Performance: 69/100
+- LCP: 5,3 s (rosso)
+- FID: 200 ms parametro TBT (verde)
+- CLS: 0.001
+
+**Desktop:**
+- Performance: 86/100
+- LCP: 1,4 s (rosso)
+- FID: 210 ms parametro TBT (rosso)
+- CLS: 0
+
+**Opportunità principali:**
+- [ ] ...
+- [ ] ...
+
+---
+
+### The Lizberries (https://www.thelizards.it/lizberries/)
+
+**Mobile:**
+- Performance: 55/100
+- LCP: 24,2 s (rosso)
+- FID: 80 ms parametro TBT (verde)
+- CLS: 0.001
+
+**Desktop:**
+- Performance: 83/100
+- LCP: 2,1 s (rosso)
+- FID: 180 ms ms parametro TBT (rosso)
+- CLS: 0.006
+
+**Opportunità principali:**
+- [ ] ...
+- [ ] ...
+
+---
+
+## 🎯 Prossime Ottimizzazioni (in base ai risultati)
+
+### Alta Priorità
+- [ ] Service Worker / PWA (caching, offline)
+- [ ] Font optimization (preload, display swap)
+- [ ] Critical CSS expansion
+
+### Media Priorità
+- [ ] AVIF images support
+- [ ] Responsive images srcset
+- [ ] Prefetch per navigazione
+
+### Bassa Priorità
+- [ ] HTTP/2 Server Push
+- [ ] WebP/AVIF con fallback automatico
+- [ ] Code splitting
+
+---
+
+## 📌 Note
+
+**Test Conditions:**
+- Testa sempre sia Mobile che Desktop
+- Usa "Throttling: Slow 4G" per Mobile
+- Fai 2-3 test per ogni sito (media dei risultati)
+- Testa in orari diversi per evitare cache CDN
+
+**Confronto:**
+Per vedere il miglioramento, confronta con test precedenti se disponibili.
+
+**Tools Aggiuntivi (opzionali):**
+- WebPageTest: https://www.webpagetest.org/
+- GTmetrix: https://gtmetrix.com/
+- Chrome DevTools Lighthouse (locale)
+
+---
+
+**Data ultimo test:** ___________
+**Testato da:** ___________

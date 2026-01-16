@@ -76,28 +76,63 @@ button {
 }
 
 #showcase-background-thelizberries {
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome.webp")
+    /* Mobile-first: immagine ottimizzata per mobile */
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome-mobile.webp")
+}
+
+/* Tablet: immagine intermedia */
+@media (min-width: 768px) {
+    #showcase-background-thelizberries {
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome-tablet.webp")
+    }
+}
+
+/* Desktop: immagine full quality */
+@media (min-width: 1200px) {
+    #showcase-background-thelizberries {
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome.webp")
+    }
 }
 
 /* Immagini hero ottimizzate per mobile (caricate solo su mobile) */
 @media (max-width: 768px) {
     #showcase-background-thelizards {
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome.webp");
-        /* Su mobile usiamo background-size per ridurre qualità */
+        /* Mobile usa già theLizardsHome-mobile.webp dal Critical CSS inline */
         background-size: cover;
-        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Tablet - immagine intermedia */
+@media (min-width: 768px) and (max-width: 1199px) {
+    #showcase-background-thelizards {
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome-tablet.webp")
     }
 }
 
 /* Desktop - immagine full quality */
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
     #showcase-background-thelizards {
         background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome.webp")
     }
 }
 
 #showcase-background-5cerealiz {
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome.webp")
+    /* Mobile-first: immagine ottimizzata per mobile */
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome-mobile.webp")
+}
+
+/* Tablet: immagine intermedia */
+@media (min-width: 768px) {
+    #showcase-background-5cerealiz {
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome-tablet.webp")
+    }
+}
+
+/* Desktop: immagine full quality */
+@media (min-width: 1200px) {
+    #showcase-background-5cerealiz {
+        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome.webp")
+    }
 }
 
 #showcase-background-promo-lizberries {
