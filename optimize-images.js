@@ -13,7 +13,6 @@ const path = require('path');
 const MOBILE_WIDTH = 800; // Larghezza massima per mobile
 const TABLET_WIDTH = 1200; // Larghezza per tablet
 const QUALITY_WEBP = 85; // Qualità WebP (mobile)
-const QUALITY_AVIF = 70; // Qualità AVIF (più aggressiva)
 
 const images = [
     {
@@ -79,24 +78,6 @@ async function optimizeImage(imageConfig) {
         const tabletWebpSavings = ((originalSize - tabletWebpSize) / originalSize * 100).toFixed(1);
         console.log(`   ✅ Tablet WebP: ${(tabletWebpSize / 1024).toFixed(2)} KB (-${tabletWebpSavings}%)`);
 
-        // 3. Mobile AVIF (formato premium, -50% vs WebP)
-        const mobileAvifPath = path.join(outputDir, `${baseName}-mobile.avif`);
-        try {
-            await sharp(input)
-                .resize(MOBILE_WIDTH, null, {
-                    fit: 'inside',
-                    withoutEnlargement: true
-                })
-                .avif({ quality: QUALITY_AVIF, effort: 6 })
-                .toFile(mobileAvifPath);
-            
-            const mobileAvifSize = fs.statSync(mobileAvifPath).size;
-            const avifSavings = ((originalSize - mobileAvifSize) / originalSize * 100).toFixed(1);
-            console.log(`   🚀 Mobile AVIF: ${(mobileAvifSize / 1024).toFixed(2)} KB (-${avifSavings}%) [PREMIUM]`);
-        } catch (avifError) {
-            console.log(`   ⚠️  AVIF non supportato (richiede sharp compilato con libavif)`);
-        }
-
         console.log(`   📊 Risparmio stimato mobile: ~${mobileWebpSavings}%`);
 
     } catch (error) {
@@ -110,7 +91,6 @@ async function main() {
     console.log(`   - Mobile: ${MOBILE_WIDTH}px width`);
     console.log(`   - Tablet: ${TABLET_WIDTH}px width`);
     console.log(`   - WebP Quality: ${QUALITY_WEBP}%`);
-    console.log(`   - AVIF Quality: ${QUALITY_AVIF}%`);
 
     // Verifica se sharp è installato
     try {
