@@ -47,12 +47,6 @@
         body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1rem;background:#182430;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0}
         .background{background-repeat:no-repeat;background-size:cover;background-position:center}
         .background.main-pic{background-position:top}
-        /* Mobile-first: usa immagine ottimizzata per mobile */
-        #showcase-background-thelizards{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.6)),url("thelizards/lizardsPhotos/theLizardsHome-mobile.webp");min-height:100vh}
-        /* Tablet: immagine intermedia */
-        @media (min-width:768px){#showcase-background-thelizards{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.6)),url("thelizards/lizardsPhotos/theLizardsHome-tablet.webp")}}
-        /* Desktop: immagine full quality */
-        @media (min-width:1200px){#showcase-background-thelizards{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.6)),url("thelizards/lizardsPhotos/theLizardsHome.webp")}}
         .text-white{color:#fff!important}
         .container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
         @media (min-width:768px){.container{max-width:720px}}
@@ -183,6 +177,15 @@
 
     <main>
         <section class="background main-pic grid grid-center" id="showcase-background-thelizards">
+            <img src="thelizards/lizardsPhotos/theLizardsHome-mobile.webp"
+                 srcset="thelizards/lizardsPhotos/theLizardsHome-mobile.webp 800w,
+                         thelizards/lizardsPhotos/theLizardsHome-tablet.webp 1200w,
+                         thelizards/lizardsPhotos/theLizardsHome.webp 1920w"
+                 sizes="100vw"
+                 fetchpriority="high"
+                 alt="The Lizards - Italian rock band with original songs"
+                 class="hero-background-image">
+            <div class="hero-gradient-overlay"></div>
             <div class="container text-white container-title position-relative">
                 <h1 class="display-2 mb-3">The Lizards</h1>
 

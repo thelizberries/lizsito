@@ -36,11 +36,36 @@ button {
 .background {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center
+    background-position: center;
+    position: relative;
+    min-height: 100vh;
 }
 
 .background.main-pic {
     background-position: top
+}
+
+/* Hero background image as <img> for LCP optimization */
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Gradient overlay su hero images */
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6));
+    z-index: -1;
+    pointer-events: none;
 }
 
 .no-underline {
@@ -75,64 +100,11 @@ button {
     visibility: hidden;
 }
 
-#showcase-background-thelizberries {
-    /* Mobile-first: immagine ottimizzata per mobile */
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome-mobile.webp")
-}
-
-/* Tablet: immagine intermedia */
-@media (min-width: 768px) {
-    #showcase-background-thelizberries {
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome-tablet.webp")
-    }
-}
-
-/* Desktop: immagine full quality */
-@media (min-width: 1200px) {
-    #showcase-background-thelizberries {
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../lizberries/lizberriesPhotos/theLizberriesHome.webp")
-    }
-}
-
-/* Immagini hero ottimizzate per mobile (caricate solo su mobile) */
-@media (max-width: 768px) {
-    #showcase-background-thelizards {
-        /* Mobile usa già theLizardsHome-mobile.webp dal Critical CSS inline */
-        background-size: cover;
-    }
-}
-
-/* Tablet - immagine intermedia */
-@media (min-width: 768px) and (max-width: 1199px) {
-    #showcase-background-thelizards {
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome-tablet.webp")
-    }
-}
-
-/* Desktop - immagine full quality */
-@media (min-width: 1200px) {
-    #showcase-background-thelizards {
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../thelizards/lizardsPhotos/theLizardsHome.webp")
-    }
-}
-
+/* Hero sections - no more background-image, using <img> tag instead */
+#showcase-background-thelizards,
+#showcase-background-thelizberries,
 #showcase-background-5cerealiz {
-    /* Mobile-first: immagine ottimizzata per mobile */
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome-mobile.webp")
-}
-
-/* Tablet: immagine intermedia */
-@media (min-width: 768px) {
-    #showcase-background-5cerealiz {
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome-tablet.webp")
-    }
-}
-
-/* Desktop: immagine full quality */
-@media (min-width: 1200px) {
-    #showcase-background-5cerealiz {
-        background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), url("../5cerealiz/5cerealizPhotos/5CerealizHome.webp")
-    }
+    /* Styles moved to .background and .hero-background-image */
 }
 
 #showcase-background-promo-lizberries {
