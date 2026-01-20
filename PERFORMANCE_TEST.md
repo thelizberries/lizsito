@@ -78,16 +78,16 @@
 ### The Lizards (https://www.thelizards.it/)
 
 **Mobile:**
-- Performance: 59/100
-- LCP: 12,7 s (rosso)
-- FID: 50 ms parametro TBT (verde)
+- Performance: 85/100
+- LCP: 2,6 s (rosso)
+- FID: 220 ms parametro TBT (rosso)
 - CLS: 0
 
 **Desktop:**
-- Performance: 97/100
-- LCP: 0,9 s
-- FID: 100 ms parametro TBT (verde)
-- CLS: 0.005
+- Performance: 98/100
+- LCP: 0,9 s (verde)
+- FID: 60 ms parametro TBT (verde)
+- CLS: 0.002
 
 **Opportunità principali:**
 - [ ] ...
@@ -98,15 +98,15 @@
 ### 5CereaLiz (https://www.thelizards.it/5cerealiz/)
 
 **Mobile:**
-- Performance: 55/100
-- LCP: 15,5 s (rosso)
-- FID: 90 ms parametro TBT (verde)
+- Performance: 58/100
+- LCP: 7,7 s (rosso)
+- FID: 140 ms parametro TBT (verde)
 - CLS: 0
 
 **Desktop:**
-- Performance: 95/100
-- LCP: 1,2 s (rosso)
-- FID: 80 ms parametro TBT (rosso)
+- Performance: 87/100
+- LCP: 2,0 s (verde)
+- FID: 110 ms parametro TBT (rosso)
 - CLS: 0
 
 **Opportunità principali:**
@@ -119,15 +119,15 @@
 
 **Mobile:**
 - Performance: 55/100
-- LCP: 19,7 s (rosso)
-- FID: 110 ms parametro TBT (verde)
-- CLS: 0.001
+- LCP: 24,2 s (rosso)
+- FID: 80 ms parametro TBT (verde)
+- CLS: 0
 
 **Desktop:**
-- Performance: 84/100
+- Performance: 81/100
 - LCP: 2,3 s (rosso)
-- FID: 130 ms ms parametro TBT (verde)
-- CLS: 0.058
+- FID: 150 ms ms parametro TBT (verde)
+- CLS: 0
 
 **Opportunità principali:**
 - [ ] ...
