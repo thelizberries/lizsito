@@ -297,7 +297,7 @@ function loadImages() {
                 <div class="item">
                     <a href="${image}" class="fancylight popup-btn" data-fancybox-group="light"
                     aria-label="Visualizza l'immagine ${picCount} della galleria fotografica">
-                        <img class="img-fluid max-height-155" src="${image}" alt="">
+                        <img class="img-fluid max-height-155" src="${image}" alt="" loading="lazy">
                     </a>
                 </div>
             `;
