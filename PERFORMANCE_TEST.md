@@ -78,16 +78,16 @@
 ### The Lizards (https://www.thelizards.it/)
 
 **Mobile:**
-- Performance: 85/100
-- LCP: 2,6 s (rosso)
-- FID: 220 ms parametro TBT (rosso)
+- Performance: 100/100
+- LCP: 0,8 s
+- FID: 0 ms parametro TBT
 - CLS: 0
 
 **Desktop:**
 - Performance: 98/100
-- LCP: 0,9 s (verde)
-- FID: 60 ms parametro TBT (verde)
-- CLS: 0.002
+- LCP: 0,8 s (verde)
+- FID: 50 ms parametro TBT (verde)
+- CLS: 0.003
 
 **Opportunità principali:**
 - [ ] ...
@@ -98,15 +98,15 @@
 ### 5CereaLiz (https://www.thelizards.it/5cerealiz/)
 
 **Mobile:**
-- Performance: 58/100
-- LCP: 7,7 s (rosso)
-- FID: 140 ms parametro TBT (verde)
+- Performance: 100/100
+- LCP: 0,8 s
+- FID: 0 ms parametro TBT 
 - CLS: 0
 
 **Desktop:**
-- Performance: 87/100
-- LCP: 2,0 s (verde)
-- FID: 110 ms parametro TBT (rosso)
+- Performance: 100/100
+- LCP: 0,2 s 
+- FID: 0 ms parametro TBT
 - CLS: 0
 
 **Opportunità principali:**
@@ -118,15 +118,15 @@
 ### The Lizberries (https://www.thelizards.it/lizberries/)
 
 **Mobile:**
-- Performance: 55/100
-- LCP: 24,2 s (rosso)
-- FID: 80 ms parametro TBT (verde)
+- Performance: 100/100
+- LCP: 0,8 s 
+- FID: 0 ms parametro TBT
 - CLS: 0
 
 **Desktop:**
-- Performance: 81/100
-- LCP: 2,3 s (rosso)
-- FID: 150 ms ms parametro TBT (verde)
+- Performance: 100/100
+- LCP: 0,2 s
+- FID: 0 ms ms parametro TBT
 - CLS: 0
 
 **Opportunità principali:**

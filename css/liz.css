@@ -38,7 +38,6 @@ button {
     background-size: cover;
     background-position: center;
     position: relative;
-    min-height: 100vh;
 }
 
 .background.main-pic {
@@ -487,7 +486,8 @@ bi-spotify:focus,
 
 .img-fluid_tqol {
     object-fit: cover;
-    max-width: 400px
+    max-width: 400px;
+    height: auto
 }
 
 .scroll-btn {
