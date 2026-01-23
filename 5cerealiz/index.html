@@ -40,6 +40,31 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="../css/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Critical CSS inline per FCP/LCP -->
+    <style>
+        /* Font loading optimization */
+        @font-face{font-family:"Helvetica Neue";font-display:swap}
+        body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1rem;background:#182430;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0}
+        /* Hero section critical styles */
+        .background{background-repeat:no-repeat;background-size:cover;background-position:center;position:relative}
+        .background.main-pic{background-position:top}
+        .hero-background-image{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+        .hero-gradient-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.6));z-index:-1;pointer-events:none}
+        .grid{display:grid}
+        .grid-center{place-items:center;min-height:100vh}
+        /* Typography */
+        .text-white{color:#fff!important}
+        .text-uppercase{text-transform:uppercase!important}
+        .display-2{font-size:3.5rem;font-weight:300;line-height:1.2}
+        .mb-3{margin-bottom:1rem!important}
+        /* Container */
+        .container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+        @media (min-width:768px){.container{max-width:720px}}
+        @media (min-width:992px){.container{max-width:960px}}
+        @media (min-width:1200px){.container{max-width:1140px}}
+    </style>
+    
     <!-- <link rel="stylesheet" href="https://r.mobirisesite.com/417179/assets/css/mbr-additional.css?rnd=1714551368451" type="text/css"> -->
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
