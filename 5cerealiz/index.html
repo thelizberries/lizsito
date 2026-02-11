@@ -408,7 +408,7 @@
             <h2 class="text-uppercase display-4">Contattaci!</h2>
             <hr class="hr-red">
             <form class="text-left container mt-5" id="contactForm" action="#" method="POST"
-                onsubmit="sendEmail(); return false;">
+                onsubmit="sendEmail(event); return false;">
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <div class="form-group position-relative">
@@ -453,42 +453,75 @@
         <i id="backToTop" class="bi bi-caret-up-square" title="Back to top"></i>
 
         <script>
-            function sendEmail() {
-                event.preventDefault();
+            const CONTACT_WORKER_URL = 'https://contact-verify.lizberries.workers.dev';
 
-                const templateParams = {
+            async function sendEmail(event) {
+                if (event) {
+                    event.preventDefault();
+                }
+
+                const messageText = document.getElementById('responseMessageText');
+                const messageBox = document.getElementById('responseMessage');
+                const submitBtn = document.getElementById('send');
+                const form = document.getElementById('contactForm');
+
+                const payload = {
                     first_name: document.getElementById('firstname').value,
                     last_name: document.getElementById('lastname').value,
                     e_mail: document.getElementById('emailaddress').value,
                     subject: document.getElementById('subject').value,
                     message: document.getElementById('message').value,
-                    to_name: "5 Cerealiz"
+                    source: '5cerealiz'
                 };
 
-                emailjs.send('service_xg8i1we', 'template_00lpmnj', templateParams)
-                    .then(function (response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                        // Mostra il messaggio di successo
-                        const messageText = document.getElementById('responseMessageText');
-                        messageText.innerText = 'Email sent successfully!';
-                        messageText.className = 'text-success'; // Cambia il colore del testo a verde
+                submitBtn.disabled = true;
+                messageText.innerText = 'Invio email di verifica...';
+                messageText.className = 'text-info';
+                messageBox.style.display = 'block';
 
-                        document.getElementById('responseMessage').style.display = 'block';
-
-                        document.getElementById('contactForm').reset();
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                        // Mostra il messaggio di errore
-                        const messageText = document.getElementById('responseMessageText');
-                        messageText.innerText = 'Error sending email, please try again.';
-                        messageText.className = 'text-danger'; // Cambia il colore del testo a rosso
-
-                        document.getElementById('responseMessage').style.display = 'block';
+                try {
+                    const response = await fetch(`${CONTACT_WORKER_URL}/request`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
                     });
 
-                setTimeout(function () {
-                    document.getElementById('responseMessage').style.display = 'none';
-                }, 5000);
+                    let responseData = null;
+                    try {
+                        responseData = await response.json();
+                    } catch (parseError) {
+                        responseData = null;
+                    }
+
+                    if (!response.ok) {
+                        throw new Error((responseData && responseData.error) || `Request failed (${response.status})`);
+                    }
+
+                    if (responseData && responseData.success !== true) {
+                        throw new Error(responseData.error || 'Verification email not accepted');
+                    }
+
+                    messageText.innerText = 'Controlla la tua email per confermare il messaggio.';
+                    messageText.className = 'text-success';
+                    if (form && typeof form.reset === 'function') {
+                        form.reset();
+                    } else if (form) {
+                        form.querySelectorAll('input, textarea').forEach((field) => {
+                            field.value = '';
+                        });
+                    }
+                } catch (error) {
+                    console.error('Contact error:', error);
+                    messageText.innerText = error.message || 'Impossibile inviare l\'email di verifica. Riprova.';
+                    messageText.className = 'text-danger';
+                } finally {
+                    submitBtn.disabled = false;
+                    setTimeout(function () {
+                        messageBox.style.display = 'none';
+                    }, 6000);
+                }
             }
         </script>
 
@@ -525,19 +558,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
         integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" defer onerror="this.onerror=null;this.src='../js/jquery.magnific-popup.min.js'"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="index.min.js" defer></script>
-    
-    <script>
-        // EmailJS init - wait for window load to ensure all defer scripts are ready
-        window.addEventListener('load', function() {
-            if (typeof emailjs !== 'undefined') {
-                emailjs.init({
-                    publicKey: "eMFqVLczvXK94rFGl",
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>

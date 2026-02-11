@@ -118,10 +118,25 @@ button {
     background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url("../5cerealiz/5cerealizPhotos/background-video-promo.jpg")
 }
 
+/* Responsive background per Live/Tour section - WebP ottimizzato */
 #showcase-background-live-lizberries {
-    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url("../lizberries/lizberriesPhotos/background-lizberries-live.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url("../lizberries/lizberriesPhotos/background-lizberries-live-mobile.webp");
     background-position: center;
     background-size: cover
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+    #showcase-background-live-lizberries {
+        background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url("../lizberries/lizberriesPhotos/background-lizberries-live-tablet.webp");
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    #showcase-background-live-lizberries {
+        background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url("../lizberries/lizberriesPhotos/background-lizberries-live.webp");
+    }
 }
 
 #showcase-background-thelizards img,

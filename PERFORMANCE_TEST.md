@@ -78,15 +78,15 @@
 ### The Lizards (https://www.thelizards.it/)
 
 **Mobile:**
-- Performance: 58/100
-- LCP: 11,7 s
-- FID: 140 ms parametro TBT
+- Performance: 59/100
+- LCP: 11,6 s
+- FID: 90 ms parametro TBT
 - CLS: 0
 
 **Desktop:**
-- Performance: 92/100
+- Performance: 97/100
 - LCP: 1,2 s 
-- FID: 140 ms parametro TBT
+- FID: 60 ms parametro TBT
 - CLS: 0.005
 
 **Opportunità principali:**
@@ -98,15 +98,15 @@
 ### 5CereaLiz (https://www.thelizards.it/5cerealiz/)
 
 **Mobile:**
-- Performance: 56/100
-- LCP: 14,6 s
-- FID: 70 ms parametro TBT 
+- Performance: 79/100
+- LCP: 3,9 s
+- FID: 100 ms parametro TBT 
 - CLS: 0.002
 
 **Desktop:**
-- Performance: 91/100
-- LCP: 1,1 s 
-- FID: 160 ms parametro TBT
+- Performance: 98/100
+- LCP: 0,9 s 
+- FID: 70 ms parametro TBT
 - CLS: 0
 
 **Opportunità principali:**
@@ -118,16 +118,16 @@
 ### The Lizberries (https://www.thelizards.it/lizberries/)
 
 **Mobile:**
-- Performance: 62/100
-- LCP: 10,7 s 
-- FID: 100 ms parametro TBT
-- CLS: 0.002
+- Performance: 53/100
+- LCP: 19,8 s 
+- FID: 170 ms parametro TBT
+- CLS: 0
 
 **Desktop:**
-- Performance: 90/100
+- Performance: 88/100
 - LCP: 1,7 s
-- FID: 100 ms ms parametro TBT
-- CLS: 0.051
+- FID: 150 ms ms parametro TBT
+- CLS: 0
 
 **Opportunità principali:**
 - [ ] ...
@@ -172,5 +172,5 @@ Per vedere il miglioramento, confronta con test precedenti se disponibili.
 
 ---
 
-**Data ultimo test:** 19/01/2026
+**Data ultimo test:** 23/01/2026
 **Testato da:** Mattia
