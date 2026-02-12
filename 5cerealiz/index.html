@@ -452,79 +452,6 @@
         <!-- Pulsante per tornare in cima -->
         <i id="backToTop" class="bi bi-caret-up-square" title="Back to top"></i>
 
-        <script>
-            const CONTACT_WORKER_URL = 'https://contact-verify.lizberries.workers.dev';
-
-            async function sendEmail(event) {
-                if (event) {
-                    event.preventDefault();
-                }
-
-                const messageText = document.getElementById('responseMessageText');
-                const messageBox = document.getElementById('responseMessage');
-                const submitBtn = document.getElementById('send');
-                const form = document.getElementById('contactForm');
-
-                const payload = {
-                    first_name: document.getElementById('firstname').value,
-                    last_name: document.getElementById('lastname').value,
-                    e_mail: document.getElementById('emailaddress').value,
-                    subject: document.getElementById('subject').value,
-                    message: document.getElementById('message').value,
-                    source: '5cerealiz'
-                };
-
-                submitBtn.disabled = true;
-                messageText.innerText = 'Invio email di verifica...';
-                messageText.className = 'text-info';
-                messageBox.style.display = 'block';
-
-                try {
-                    const response = await fetch(`${CONTACT_WORKER_URL}/request`, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(payload)
-                    });
-
-                    let responseData = null;
-                    try {
-                        responseData = await response.json();
-                    } catch (parseError) {
-                        responseData = null;
-                    }
-
-                    if (!response.ok) {
-                        throw new Error((responseData && responseData.error) || `Request failed (${response.status})`);
-                    }
-
-                    if (responseData && responseData.success !== true) {
-                        throw new Error(responseData.error || 'Verification email not accepted');
-                    }
-
-                    messageText.innerText = 'Controlla la tua email per confermare il messaggio.';
-                    messageText.className = 'text-success';
-                    if (form && typeof form.reset === 'function') {
-                        form.reset();
-                    } else if (form) {
-                        form.querySelectorAll('input, textarea').forEach((field) => {
-                            field.value = '';
-                        });
-                    }
-                } catch (error) {
-                    console.error('Contact error:', error);
-                    messageText.innerText = error.message || 'Impossibile inviare l\'email di verifica. Riprova.';
-                    messageText.className = 'text-danger';
-                } finally {
-                    submitBtn.disabled = false;
-                    setTimeout(function () {
-                        messageBox.style.display = 'none';
-                    }, 6000);
-                }
-            }
-        </script>
-
     </main>
 
     <footer class="text-white pt-3 pb-3">
@@ -551,14 +478,16 @@
 
     <!-- Scripts con defer per ridurre TBT -->
     <!-- jQuery 3.7.1 (locale) -->
-    <script src="../js/jquery-3.7.1.min.js" defer></script>
+    <script src="js/jquery-3.7.1.min.js" defer></script>
     <!-- Bootstrap bundle include già popper.js (locale) -->
-    <script src="../js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
     <!-- Magnific Popup JS con fallback locale -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
         integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" defer onerror="this.onerror=null;this.src='../js/jquery.magnific-popup.min.js'"></script>
-    <script src="index.min.js" defer></script>
+    <script src="js/magnific-init.min.js" defer></script>
+    <script src="js/index.min.js" defer></script>
+    <script src="js/contact.min.js" defer></script>
 </body>
 
 </html>
