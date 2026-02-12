@@ -718,7 +718,7 @@
         <section class="pb-5 pt-5 text-white text-center" id="contactForm">
             <h2 class="text-uppercase display-4">Contact Us</h2>
             <hr class="hr-red">
-            <form class="text-left container mt-5" id="contactForm" action="#" method="POST"
+            <form class="text-left container mt-5" id="contactFormElement" action="#" method="POST"
                 onsubmit="sendEmail(event); return false;">
                 <div class="row">
                     <div class="col-12 col-lg-6">
@@ -774,7 +774,7 @@
                 const messageText = document.getElementById('responseMessageText');
                 const messageBox = document.getElementById('responseMessage');
                 const submitBtn = document.getElementById('send');
-                const form = document.getElementById('contactForm');
+                const form = document.getElementById('contactFormElement');
 
                 const payload = {
                     first_name: document.getElementById('firstname').value,
