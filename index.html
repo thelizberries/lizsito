@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Liz's Projects - The Lizards</title>
-    <meta charset="UTF-8">
     <meta name="description" content="The Lizards, Scopri di più.">
     <meta name="keywords"
         content="The Lizards, Italian rock band, band live, Milano, Sorry Mom, Marco Biondi, celtic, rock">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="The Lizards - Italian Rock Band">
@@ -25,7 +23,6 @@
     <!-- Preconnect solo per risorse critiche -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://code.jquery.com">
     
     <!-- Preload SOLO risorse critiche per LCP - con dimensioni esatte -->
     <link rel="preload" href="css/liz.min.css" as="style">
@@ -224,7 +221,7 @@
                     <div class="col-md-12">
                         <iframe class="spotify-iframe" title="The Lizards Spotify Player"
                             src="https://open.spotify.com/embed/artist/5YnIGjxUv0DNzA9doia11J?utm_source=generator&theme=0"
-                            width="50%" height="155" frameBorder="0" allow="autoplay; 
+                            width="50%" height="155" frameBorder="0" loading="lazy" allow="autoplay; 
                             clipboard-write; encrypted-media; fullscreen; picture-in-picture">
                         </iframe>
                     </div>
@@ -254,7 +251,7 @@
                             <iframe
                                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheLizardsMilano&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                                 width="400" height="500" class="facebook-iframe" scrolling="no" frameborder="0"
-                                allowfullscreen="true" title="The Lizards Facebook page"
+                                allowfullscreen="true" title="The Lizards Facebook page" loading="lazy"
                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
                     </div>
@@ -355,7 +352,7 @@
                 <!-- Container con pulsanti di scorrimento -->
                 <div class="portfolio-wrapper position-relative">
                     <!-- Pulsante di scorrimento a sinistra -->
-                    <button class="scroll-btn left-scroll position-absolute" id="scrollLeft">&#10094;</button>
+                    <button class="scroll-btn left-scroll position-absolute" id="scrollLeft" type="button" aria-label="Scroll left">&#10094;</button>
 
                     <!-- Portfolio Item Container -->
                     <div class="portfolio-item-container overflow-hidden" id="scrollContainer">
@@ -365,7 +362,7 @@
                     </div>
 
                     <!-- Pulsante di scorrimento a destra -->
-                    <button class="scroll-btn right-scroll position-absolute" id="scrollRight">&#10095;</button>
+                    <button class="scroll-btn right-scroll position-absolute" id="scrollRight" type="button" aria-label="Scroll right">&#10095;</button>
                 </div>
             </div>
         </section>

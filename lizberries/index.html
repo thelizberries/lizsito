@@ -304,7 +304,7 @@
                             <iframe
                                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheLizberries&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                                 width="400" height="500" class="facebook-iframe" scrolling="no" frameborder="0"
-                                allowfullscreen="true"
+                                allowfullscreen="true" loading="lazy"
                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                                 title="The Lizberries Facebook Page">
                             </iframe>
@@ -367,7 +367,7 @@
                                 src="https://www.youtube.com/embed/2w8XTn61Lqo?si=klOuHrfD5EYLgcO9"
                                 title="The Lizberries - Promo video" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
                             </iframe>
                         </div>
                     </div>
@@ -622,7 +622,7 @@
                 <!-- Container con pulsanti di scorrimento -->
                 <div class="portfolio-wrapper position-relative">
                     <!-- Pulsante di scorrimento a sinistra -->
-                    <button class="scroll-btn left-scroll position-absolute" id="scrollLeft">&#10094;</button>
+                    <button class="scroll-btn left-scroll position-absolute" id="scrollLeft" type="button" aria-label="Scroll left">&#10094;</button>
 
                     <!-- Portfolio Item Container -->
                     <div class="portfolio-item-container overflow-hidden" id="scrollContainer">
@@ -632,7 +632,7 @@
                     </div>
 
                     <!-- Pulsante di scorrimento a destra -->
-                    <button class="scroll-btn right-scroll position-absolute" id="scrollRight">&#10095;</button>
+                    <button class="scroll-btn right-scroll position-absolute" id="scrollRight" type="button" aria-label="Scroll right">&#10095;</button>
                 </div>
             </div>
         </section>
