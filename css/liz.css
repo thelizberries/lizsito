@@ -79,6 +79,10 @@ button {
     text-align: center;
 }
 
+.image-container {
+    margin-bottom: 40px
+}
+
 #backToTop {
     position: fixed;
     bottom: 30px;
@@ -178,7 +182,7 @@ button {
 .btn-wrapper-info-tour {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .btn-wrapper {
@@ -453,6 +457,70 @@ bi-spotify:focus,
     max-height: 155px;
     object-fit: cover;
     display: block
+}
+
+.download-card {
+    background: linear-gradient(160deg, #1a2d3a 0%, #0d1b24 100%);
+    border: 1px solid rgba(248, 23, 75, 0.35) !important;
+    border-top: 3px solid #f8174b !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.download-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 24px rgba(248, 23, 75, 0.35);
+    border-color: rgba(248, 23, 75, 0.8) !important;
+    background: linear-gradient(160deg, #1f3545 0%, #0f2030 100%);
+}
+
+.download-card .download-icon {
+    color: #ffffff;
+    font-size: 2rem;
+    filter: drop-shadow(0 0 6px rgba(248, 23, 75, 0.5));
+}
+
+.download-card .card-title {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    min-height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.download-card .btn-download {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.9rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(217deg, #f8174b, #7f1fa3 70.71%);
+    border: none;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.download-card .btn-download:hover {
+    background: linear-gradient(217deg, #ff2a5a, #9d3eb8 70.71%);
+    box-shadow: 0 3px 12px rgba(248, 23, 75, 0.5);
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    .download-row {
+        flex-wrap: nowrap;
+    }
+    .download-row > [class*="col-"] {
+        min-width: 0;
+    }
 }
 
 .musicopoliz-img {
