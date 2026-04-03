@@ -400,7 +400,10 @@ bi-spotify:focus,
 
 .facebook-iframe {
     border: none;
-    overflow: hidden
+    overflow: hidden;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto
 }
 
 .portfolio-menu {
@@ -569,6 +572,7 @@ bi-spotify:focus,
 
 .img-fluid_tqol {
     object-fit: cover;
+    width: 100%;
     max-width: 400px;
     height: auto
 }
