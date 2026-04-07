@@ -1,5 +1,7 @@
 /* Ottimizzazioni performance */
 @font-face {
+    font-family: "Helvetica Neue";
+    src: local("Helvetica Neue"), local("Helvetica"), local("Arial");
     font-display: swap;
 }
 
@@ -104,11 +106,6 @@ button {
 }
 
 /* Hero sections - no more background-image, using <img> tag instead */
-#showcase-background-thelizards,
-#showcase-background-thelizberries,
-#showcase-background-5cerealiz {
-    /* Styles moved to .background and .hero-background-image */
-}
 
 #showcase-background-promo-lizberries {
     background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url("../lizberries/lizberriesPhotos/background-video-promo.jpg");
