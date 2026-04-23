@@ -365,8 +365,10 @@ a.text-red:hover {
 .bi-facebook,
 .bi-youtube,
 .bi-instagram,
-.bi-spotify {
-    color: rgba(255, 255, 255, .5)
+.bi-spotify,
+.bi-apple {
+    color: rgba(255, 255, 255, .5);
+    vertical-align: middle
 }
 
 .bi-facebook:focus,
@@ -375,8 +377,10 @@ a.text-red:hover {
 .bi-youtube:hover,
 .bi-instagram:focus,
 .bi-instagram:hover,
-bi-spotify:focus,
-.bi-spotify:hover {
+.bi-spotify:focus,
+.bi-spotify:hover,
+.bi-apple:focus,
+.bi-apple:hover {
     color: rgba(255, 255, 255, .75)
 }
 
