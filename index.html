@@ -17,6 +17,13 @@
     <meta property="og:url" content="https://www.thelizards.it/">
     <meta property="og:locale" content="it_IT">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Lizards">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Lizards - Italian Rock Band">
+    <meta name="twitter:description" content="Emotions and music with the best The Lizards songs. Discover dates and live content.">
+    <meta name="twitter:image" content="https://www.thelizards.it/thelizards/lizardsPhotos/theLizardsHome.webp">
 
     <link rel="canonical" href="https://www.thelizards.it/">
     
@@ -181,7 +188,7 @@
                     </ul>
                 </div>
 
-                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" aria-controls="submenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -221,13 +228,16 @@
 
                 <div class="row">
 
-                    <!-- Lettore Spotify -->
+                    <!-- Lettore Spotify (caricato solo dopo consenso cookie) -->
                     <div class="col-md-12">
-                        <iframe class="spotify-iframe" title="The Lizards Spotify Player"
-                            src="https://open.spotify.com/embed/artist/5YnIGjxUv0DNzA9doia11J?utm_source=generator&theme=0"
-                            width="50%" height="155" frameBorder="0" loading="lazy" allow="autoplay; 
-                            clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-                        </iframe>
+                        <div id="spotify-consent-container" class="consent-placeholder spotify-placeholder"
+                             data-type="spotify"
+                             data-src="https://open.spotify.com/embed/artist/5YnIGjxUv0DNzA9doia11J?utm_source=generator&theme=0">
+                            <div class="consent-placeholder-inner">
+                                <i class="bi bi-spotify"></i>
+                                <p>Accetta i cookie per ascoltare la playlist su Spotify.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -251,12 +261,17 @@
                     <div class="col-12 col-lg-6 text-white text-center">
                         <h2 class="text-uppercase display-4">Noticeboard</h2>
                         <hr class="hr-red">
+                        <!-- Facebook embed caricato solo dopo consenso cookie -->
                         <div>
-                            <iframe
-                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheLizardsMilano&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                                width="400" height="500" class="facebook-iframe" scrolling="no" frameborder="0"
-                                allowfullscreen="true" title="The Lizards Facebook page" loading="lazy"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <div id="facebook-consent-container" class="consent-placeholder facebook-placeholder"
+                                 data-type="facebook"
+                                 data-title="The Lizards Facebook Page"
+                                 data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheLizardsMilano&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId">
+                                <div class="consent-placeholder-inner">
+                                    <i class="bi bi-facebook"></i>
+                                    <p>Accetta i cookie per visualizzare la timeline di Facebook.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -330,15 +345,18 @@
                 </div>
                 
                 <script>
-                    (function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "//gigstarter.s3.amazonaws.com/sdk.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'gigstarter-sdk'));
-                </script> 
+                    /* Gigstarter SDK — eseguito solo dopo consenso cookie */
+                    function loadGigstarter() {
+                        (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = 'https://gigstarter.s3.amazonaws.com/sdk.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'gigstarter-sdk'));
+                    }
+                </script>
                 <!-- Gigstarter Button - Fine -->
                 <br>
                 <p class="font-weight-100 letter-spacing-4px gig-live">
@@ -465,12 +483,12 @@
                         </div>
 
                         <div class="form-group position-relative">
-                            <input class="form-outline-gray" name="subject" id="subject" type="subject" required>
+                            <input class="form-outline-gray" name="subject" id="subject" type="text" required>
                             <label class="label-absolute" for="subject">Subject</label>
                         </div>
 
                         <div class="form-group position-relative">
-                            <input class="form-outline-gray" name="message" id="message" type="message" required>
+                            <input class="form-outline-gray" name="message" id="message" type="text" required>
                             <label class="label-absolute" for="message">Message</label>
                         </div>
                     </div>
@@ -491,7 +509,9 @@
 
     <footer class="text-white pt-3 pb-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <small>© The Lizards 2024-2025. All rights reserved.</small>
+            <small>© The Lizards 2024-2025. All rights reserved. &mdash;
+                <a href="privacy-policy.html" class="text-white" style="opacity:.6;text-decoration:none;" rel="noopener">Privacy Policy</a>
+            </small>
             <ul class="list-unstyled d-flex p-0 m-0">
                 <li class="p-3">
                     <a title="The Lizards Facebook social page" class="a-footer text-white text-decoration-none"
@@ -519,6 +539,21 @@
         </div>
     </footer>
 
+    <!-- Cookie Banner GDPR -->
+    <div id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-banner-title" style="display:none;">
+        <div class="cookie-banner-inner">
+            <p id="cookie-banner-title" class="cookie-banner-text">
+                <strong>Cookie</strong> — Usiamo cookie tecnici e, con il tuo consenso, cookie di terze parti
+                (Spotify, Facebook, Gigstarter) per arricchire la tua esperienza.
+                <a href="privacy-policy.html" rel="noopener noreferrer">Privacy Policy</a>
+            </p>
+            <div class="cookie-banner-buttons">
+                <button id="cookie-decline" class="btn btn-sm btn-cookie-decline">Rifiuta</button>
+                <button id="cookie-accept" class="btn btn-sm btn-outline-red">Accetta</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts con defer per ridurre TBT -->
     <!-- jQuery 3.7.1 (locale) -->
     <script src="js/jquery-3.7.1.min.js" defer></script>
@@ -531,6 +566,8 @@
     <script src="js/magnific-init.min.js" defer></script>
     <script src="js/index.min.js" defer></script>
     <script src="js/contact.min.js" defer></script>
+    <!-- Cookie Consent Manager GDPR -->
+    <script src="js/cookies.js" defer></script>
 </body>
 
 </html>

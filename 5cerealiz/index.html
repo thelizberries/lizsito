@@ -18,6 +18,13 @@
     <meta property="og:url" content="https://www.thelizards.it/5cerealiz/">
     <meta property="og:locale" content="it_IT">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="5CereaLiz">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="5CereaLiz - Una band cartoon rock unica">
+    <meta name="twitter:description" content="Scopri la magia della cartoon rock band 5CereaLiz. Eventi, musica e divertimento per tutta la famiglia.">
+    <meta name="twitter:image" content="https://www.thelizards.it/5cerealiz/5cerealizPhotos/5CerealizHome.webp">
 
     <link rel="canonical" href="https://www.thelizards.it/5cerealiz/">
 
@@ -118,8 +125,9 @@
 
 <body>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0"
-        nonce="A7djd2gu"></script>
+    <!-- Facebook SDK — caricato solo dopo il consenso cookie -->
+    <script type="text/plain" data-consent-src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0"
+        data-async="true" data-defer="true" data-crossorigin="anonymous"></script>
     <!-- partial:index.partial.html -->
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark-secondary">
@@ -163,7 +171,7 @@
                     </ul>
                 </div>
 
-                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation" aria-controls="submenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -210,11 +218,15 @@
                     </div>
                 </div>
                 <div>
-                    <iframe
-                        src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2F5CereaLiz%2F&width=400&layout&action&size&share=false&height=50&appId"
-                        width="400" height="35" class="facebook-iframe" scrolling="no" frameborder="0"
-                        allowfullscreen="true" loading="lazy" allow="autoplay; clipboard-write; 
-                    encrypted-media; picture-in-picture; web-share" title="5 Cerealiz Like"></iframe>
+                    <div class="consent-placeholder facebook-like-placeholder"
+                         data-type="facebook-like"
+                         data-title="5 Cerealiz Like"
+                         data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2F5CereaLiz%2F&width=400&layout&action&size&share=false&height=50&appId">
+                        <div class="consent-placeholder-inner">
+                            <i class="bi bi-facebook"></i>
+                            <p>Accetta i cookie per visualizzare il like di Facebook.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -226,12 +238,15 @@
                         <h2 class="text-uppercase display-4">Bacheca Social</h2>
                         <hr class="hr-red">
                         <div>
-                            <iframe
-                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F5Cerealiz&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                                width="400" height="500" class="facebook-iframe" scrolling="no" frameborder="0"
-                                allowfullscreen="true" loading="lazy"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                title="5 Cerealiz Facebook page"></iframe></iframe>
+                            <div class="consent-placeholder facebook-placeholder"
+                                 data-type="facebook"
+                                 data-title="5 Cerealiz Facebook page"
+                                 data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F5Cerealiz&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId">
+                                <div class="consent-placeholder-inner">
+                                    <i class="bi bi-facebook"></i>
+                                    <p>Accetta i cookie per visualizzare la timeline di Facebook.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -275,11 +290,15 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H9hDeVYVZfQ"
-                                title="5CereaLiz promo 2022" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
-                            </iframe>
+                            <div class="consent-placeholder youtube-placeholder"
+                                 data-type="youtube"
+                                 data-title="5CereaLiz promo 2022"
+                                 data-src="https://www.youtube.com/embed/H9hDeVYVZfQ">
+                                <div class="consent-placeholder-inner">
+                                    <i class="bi bi-youtube"></i>
+                                    <p>Accetta i cookie per guardare il video su YouTube.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -297,14 +316,16 @@
                   </a>
                 </div>
                 <script>
-                  (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//gigstarter.s3.amazonaws.com/sdk.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                  }(document, 'script', 'gigstarter-sdk'));
+                  function loadGigstarter() {
+                    (function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = "https://gigstarter.s3.amazonaws.com/sdk.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'gigstarter-sdk'));
+                  }
                 </script>
                 <!-- Gigstarter Button - Fine -->
 
@@ -425,12 +446,12 @@
                         </div>
 
                         <div class="form-group position-relative">
-                            <input class="form-outline-gray" name="subject" id="subject" type="subject" required>
+                            <input class="form-outline-gray" name="subject" id="subject" type="text" required>
                             <label class="label-absolute" for="subject">Oggetto</label>
                         </div>
 
                         <div class="form-group position-relative">
-                            <input class="form-outline-gray" name="message" id="message" type="message" required>
+                            <input class="form-outline-gray" name="message" id="message" type="text" required>
                             <label class="label-absolute" for="message">Messaggio</label>
                         </div>
                     </div>
@@ -449,9 +470,26 @@
 
     </main>
 
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-banner-title" style="display:none">
+        <div class="cookie-banner-inner">
+            <p class="cookie-banner-text">
+                <strong id="cookie-banner-title">Cookie</strong> — Utilizziamo cookie tecnici e, con il tuo consenso,
+                cookie di terze parti (Facebook, YouTube, Gigstarter) per migliorare la tua esperienza.
+                <a href="../privacy-policy.html" class="text-red" rel="noopener">Privacy Policy</a>
+            </p>
+            <div class="cookie-banner-buttons">
+                <button id="cookie-decline" class="btn-cookie-decline" type="button">Rifiuta</button>
+                <button id="cookie-accept" class="btn btn-sm btn-gradient text-white" type="button">Accetta</button>
+            </div>
+        </div>
+    </div>
+
     <footer class="text-white pt-3 pb-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <small>© 5 Cerealiz 2024-2025. Tutti i diritti riservati.</small>
+            <small>© 5 Cerealiz 2024-2025. Tutti i diritti riservati. |
+                <a href="../privacy-policy.html" class="text-white text-decoration-none" rel="noopener">Privacy Policy</a>
+            </small>
             <ul class="list-unstyled d-flex p-0 m-0">
                 <li class="p-3">
                     <a title="5CereaLiz Facebook social page" class="a-footer text-white text-decoration-none"
@@ -483,6 +521,7 @@
     <script src="js/magnific-init.min.js" defer></script>
     <script src="js/index.min.js" defer></script>
     <script src="js/contact.min.js" defer></script>
+    <script src="../js/cookies.js" defer></script>
 </body>
 
 </html>

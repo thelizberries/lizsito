@@ -16,8 +16,15 @@
         content="Emotions and music with the best Cranberries tribute band. Discover dates and live content.">
     <meta property="og:image" content="https://www.thelizards.it/lizberries/lizberriesPhotos/theLizberriesHome.jpg">
     <meta property="og:url" content="https://www.thelizards.it/lizberries/">
-    <meta property="og:locale" content="it_IT">
+    <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Lizberries">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Lizberries - The best Cranberries tribute band">
+    <meta name="twitter:description" content="Emotions and music with the best Cranberries tribute band. Discover dates and live content.">
+    <meta name="twitter:image" content="https://www.thelizards.it/lizberries/lizberriesPhotos/theLizberriesHome.jpg">
 
     <link rel="canonical" href="https://www.thelizards.it/lizberries/">
     <link rel="icon" type="image/x-icon" href="../lizberries/images/favicon.png">
@@ -125,9 +132,9 @@
 <body>
     <!-- Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
-        nonce="sG5G7Xyq">
-        </script>
+    <!-- Facebook SDK — loaded only after cookie consent -->
+    <script type="text/plain" data-consent-src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
+        data-async="true" data-defer="true" data-crossorigin="anonymous"></script>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark-secondary">
             <div class="container">
@@ -182,7 +189,7 @@
                     </ul>
                 </div>
 
-                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation" aria-controls="submenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -292,13 +299,15 @@
                         </div>
 
                         <div>
-                            <iframe
-                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheLizberries&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                                width="400" height="500" class="facebook-iframe" scrolling="no" frameborder="0"
-                                allowfullscreen="true" loading="lazy"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                title="The Lizberries Facebook Page">
-                            </iframe>
+                            <div class="consent-placeholder facebook-placeholder"
+                                 data-type="facebook"
+                                 data-title="The Lizberries Facebook Page"
+                                 data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheLizberries&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId">
+                                <div class="consent-placeholder-inner">
+                                    <i class="bi bi-facebook"></i>
+                                    <p>Accept cookies to view the Facebook timeline.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -355,12 +364,15 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item"
-                                src="https://www.youtube.com/embed/2w8XTn61Lqo?si=klOuHrfD5EYLgcO9"
-                                title="The Lizberries - Promo video" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
-                            </iframe>
+                            <div class="consent-placeholder youtube-placeholder"
+                                 data-type="youtube"
+                                 data-title="The Lizberries - Promo video"
+                                 data-src="https://www.youtube.com/embed/2w8XTn61Lqo?si=klOuHrfD5EYLgcO9">
+                                <div class="consent-placeholder-inner">
+                                    <i class="bi bi-youtube"></i>
+                                    <p>Accept cookies to watch this YouTube video.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -377,14 +389,16 @@
                     </a>
                 </div>
                 <script>
-                    (function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "//gigstarter.s3.amazonaws.com/sdk.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'gigstarter-sdk'));
+                    function loadGigstarter() {
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "https://gigstarter.s3.amazonaws.com/sdk.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'gigstarter-sdk'));
+                    }
                 </script>
                 <!-- Gigstarter Button - Fine -->
                 <div class="row">
@@ -862,9 +876,26 @@
 
     </main>
 
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-banner-title" style="display:none">
+        <div class="cookie-banner-inner">
+            <p class="cookie-banner-text">
+                <strong id="cookie-banner-title">Cookies</strong> — We use technical cookies and, with your consent,
+                third-party cookies (Facebook, YouTube, Gigstarter) to enhance your experience.
+                <a href="../privacy-policy.html" class="text-red" rel="noopener">Privacy Policy</a>
+            </p>
+            <div class="cookie-banner-buttons">
+                <button id="cookie-decline" class="btn-cookie-decline" type="button">Decline</button>
+                <button id="cookie-accept" class="btn btn-sm btn-gradient text-white" type="button">Accept</button>
+            </div>
+        </div>
+    </div>
+
     <footer class="text-white pt-3 pb-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <small>© The Lizberries 2024-2025. All rights reserved.</small>
+            <small>© The Lizberries 2024-2025. All rights reserved. |
+                <a href="../privacy-policy.html" class="text-white text-decoration-none" rel="noopener">Privacy Policy</a>
+            </small>
             <ul class="list-unstyled d-flex p-0 m-0">
                 <li class="p-3">
                     <a title="The Lizberries Facebook social page" class="a-footer text-white text-decoration-none"
@@ -892,6 +923,7 @@
     <script src="js/jquery.magnific-popup.min.js" defer></script>
     <script src="js/magnific-init.min.js" defer></script>
     <script src="js/contact.min.js" defer></script>
+    <script src="../js/cookies.js" defer></script>
 
 </body>
 

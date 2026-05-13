@@ -226,13 +226,14 @@ a.text-red:hover {
 
 .btn-outline-red {
     border: 1px solid #f8174b;
-    background: transparent
+    background: transparent;
+    color: #fff !important;
 }
 
 .btn-outline-red:hover {
     background-color: #f8174b;
     border-color: #f8174b;
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .btn-primary:hover,
@@ -1085,4 +1086,141 @@ a.text-red:hover {
 
 .bi-2x {
     font-size: 2rem;
+}
+
+/* =============================================
+   COOKIE BANNER GDPR
+   ============================================= */
+
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #071116;
+    border-top: 2px solid #f8174b;
+    color: #fff;
+    z-index: 9999;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, .5);
+}
+
+.cookie-banner-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cookie-banner-text {
+    margin: 0;
+    font-size: .85rem;
+    flex: 1;
+    color: rgba(255, 255, 255, .85);
+    min-width: 200px;
+}
+
+.cookie-banner-text a {
+    color: #f8174b;
+    text-decoration: underline;
+}
+
+.cookie-banner-text a:hover {
+    color: #ff4d73;
+}
+
+.cookie-banner-buttons {
+    display: flex;
+    gap: .5rem;
+    flex-shrink: 0;
+}
+
+.btn-cookie-decline {
+    border: 1px solid rgba(255, 255, 255, .4);
+    color: rgba(255, 255, 255, .8);
+    background: transparent;
+}
+
+.btn-cookie-decline:hover {
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, .6);
+}
+
+/* =============================================
+   CONSENT PLACEHOLDERS (terze parti bloccate)
+   ============================================= */
+
+.consent-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 12px;
+    color: rgba(255, 255, 255, .6);
+    font-size: .85rem;
+    padding: 1rem;
+}
+
+.consent-placeholder-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
+}
+
+.consent-placeholder-inner i {
+    font-size: 2rem;
+    opacity: .5;
+}
+
+.consent-placeholder-inner p {
+    margin: 0;
+}
+
+/* Dimensioni che replicano i rispettivi iframe */
+.spotify-placeholder {
+    width: 50%;
+    height: 155px;
+}
+
+.facebook-placeholder {
+    width: 400px;
+    max-width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Facebook like button placeholder (piccolo) */
+.facebook-like-placeholder {
+    width: 400px;
+    max-width: 100%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+/* YouTube placeholder: si espande all'interno del wrapper embed-responsive */
+.youtube-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 576px) {
+    .spotify-placeholder {
+        width: 100%;
+    }
+
+    .facebook-placeholder {
+        height: 300px;
+    }
 }
