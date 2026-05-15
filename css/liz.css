@@ -290,6 +290,10 @@ a.text-red:hover {
     width: 15em
 }
 
+.noticeboard-facebook {
+    margin-bottom: 40px;
+}
+
 .position-center {
     left: 50%;
     transform: translateX(-50%)
