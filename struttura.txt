@@ -1,0 +1,153 @@
+Elenco del percorso delle cartelle per il volume Local Disk
+Numero di serie del volume: 000000E5-A806:258B
+C:.
++---.github
+|   \---workflows
++---.husky
+|   \---_
++---5cerealiz
+|   +---5cerealizPhotos
+|   \---js
++---contact-verify
++---css
++---docs
+|   +---5Cerealiz
+|   +---TheLizards
+|   \---TheLizberries
++---images
+|   \---verify
++---ImmaginiConversione
+|   +---originali già ottimizzate
+|   +---output-avif
+|   \---output-webp
++---js
++---lizberries
+|   +---backup_images_20260123_104037
+|   +---downloads
+|   +---images
+|   +---js
+|   \---lizberriesPhotos
+|       +---photo_carousel
+|       +---pressImages
+|       \---sorgenti
++---MusicopoLiz
+|   \---worker
++---node_modules
+|   +---.bin
+|   +---@img
+|   |   +---colour
+|   |   \---sharp-win32-x64
+|   |       \---lib
+|   +---@jridgewell
+|   |   +---gen-mapping
+|   |   |   +---dist
+|   |   |   |   \---types
+|   |   |   +---src
+|   |   |   \---types
+|   |   +---resolve-uri
+|   |   |   \---dist
+|   |   |       \---types
+|   |   +---source-map
+|   |   |   +---dist
+|   |   |   +---src
+|   |   |   \---types
+|   |   +---sourcemap-codec
+|   |   |   +---dist
+|   |   |   +---src
+|   |   |   \---types
+|   |   \---trace-mapping
+|   |       +---dist
+|   |       +---src
+|   |       \---types
+|   +---@xmldom
+|   |   \---xmldom
+|   |       \---lib
+|   +---acorn
+|   |   +---bin
+|   |   \---dist
+|   +---anymatch
+|   +---balanced-match
+|   |   \---.github
+|   +---binary-extensions
+|   +---brace-expansion
+|   +---braces
+|   |   \---lib
+|   +---buffer-from
+|   +---chokidar
+|   |   +---lib
+|   |   \---types
+|   +---clean-css
+|   |   \---lib
+|   |       +---optimizer
+|   |       |   +---configuration
+|   |       |   |   \---properties
+|   |       |   +---level-0
+|   |       |   +---level-1
+|   |       |   |   +---property-optimizers
+|   |       |   |   \---value-optimizers
+|   |       |   |       \---color
+|   |       |   \---level-2
+|   |       |       \---properties
+|   |       +---options
+|   |       +---reader
+|   |       +---tokenizer
+|   |       +---utils
+|   |       \---writer
+|   +---clean-css-cli
+|   |   \---bin
+|   +---commander
+|   |   \---typings
+|   +---concat-map
+|   |   +---example
+|   |   \---test
+|   +---detect-libc
+|   |   \---lib
+|   +---fill-range
+|   +---fs.realpath
+|   +---glob
+|   +---glob-parent
+|   +---husky
+|   +---inflight
+|   +---inherits
+|   +---is-binary-path
+|   +---is-extglob
+|   +---is-glob
+|   +---is-number
+|   +---minimatch
+|   +---normalize-path
+|   +---once
+|   +---path-is-absolute
+|   +---picomatch
+|   |   \---lib
+|   +---readdirp
+|   +---semver
+|   |   +---bin
+|   |   +---classes
+|   |   +---functions
+|   |   +---internal
+|   |   \---ranges
+|   +---sharp
+|   |   +---install
+|   |   +---lib
+|   |   \---src
+|   +---source-map
+|   |   +---dist
+|   |   \---lib
+|   +---source-map-support
+|   +---terser
+|   |   +---bin
+|   |   +---dist
+|   |   +---lib
+|   |   |   +---compress
+|   |   |   \---utils
+|   |   +---node_modules
+|   |   |   \---commander
+|   |   |       \---typings
+|   |   \---tools
+|   +---to-regex-range
+|   \---wrappy
+\---thelizards
+    \---lizardsPhotos
+        +---band
+        +---photo_carousel
+        \---sorgenti
